@@ -1,17 +1,20 @@
-#!/usr/bin/env php
 <?php
 // +----------------------------------------------------------------------
 // | ThinkPHP [ WE CAN DO IT JUST THINK ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2006-2016 http://thinkphp.cn All rights reserved.
+// | Copyright (c) 2006~2018 http://thinkphp.cn All rights reserved.
 // +----------------------------------------------------------------------
 // | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
 // +----------------------------------------------------------------------
-// | Author: yunwuxin <448901948@qq.com>
+// | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
+// $Id$
 
-// 定义项目路径
-define('APP_PATH', __DIR__ . '/application/');
-
-// 加载框架引导文件
-require __DIR__.'/thinkphp/console.php';
+if (is_file($_SERVER["DOCUMENT_ROOT"] . $_SERVER["SCRIPT_NAME"])) {
+    return false;
+} else {
+    if (!isset($_SERVER['PATH_INFO'])) {
+        $_SERVER['PATH_INFO'] = $_SERVER['REQUEST_URI'];
+    }
+    require __DIR__ . "/index.php";
+}
