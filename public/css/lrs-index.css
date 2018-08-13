@@ -1,0 +1,109 @@
+li {
+    list-style:none;
+}
+
+.lrs-padding-banner {
+    /*height: 100%;*/
+    margin-top: 70px;
+    max-height: 100px;
+    height: 20px;
+    padding: 0;
+}
+
+.lrs-padding-content {
+    height: 50%;
+    margin-top: 10px;
+}
+
+.lrs-book-div {
+    width: 100%;
+    height: 180px;
+    margin-top: 6px;
+    margin-bottom: 3px;
+    background-color: #f8cbcb;
+}
+
+.lrs-book-img {
+    height: 180px;
+    width: 110px;
+    padding:1% 0 0;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    background-size: 100% auto;
+    background-repeat:no-repeat;
+}
+
+.lrs-book-summary {
+    width: calc(100% - 110px);
+    height: 180px;
+    padding: 13px 0 0 6px;
+    float: right;
+    background-color: #f7e1b5;
+}
+
+.lrs-book-summary-info {
+    height: 110px;
+    margin: 5px;
+    overflow: hidden;
+}
+
+.lrs-book-slider {
+    margin-top: 30px;
+}
+
+.lrs-book-slider-name {
+    float: left;
+    width: 125px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.lrs-book-slider-author {
+    float: right;
+    color: #b2b2b2;
+    margin-right: 5px;
+}
+
+.lrs-book-slider-category {
+    float: left;
+    height: 20px;
+    margin-right: 5px;
+    overflow: hidden;
+}
+
+/* 书籍详情页 */
+.lrs-detail-info-img {
+    height: 180px;
+    width: 123px;
+    float: left;
+    margin: 60px 0 0 0;
+    padding: 6px 0 0 0;
+}
+
+.lrs-detail-info-detail {
+    height: 280px;
+    width: calc(100% - 132px);
+    zoom: 1;
+    float: right;
+    margin: 30px 0 0 0;
+    padding: 0;
+}
+
+.lrs-detail-info-desc {
+    height: 80px;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 0 0 0;
+    padding: 0 0 6px 0;
+}
+
+.lrs-detail-info-chapter {
+    width: 280px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    text-decoration:none;
+    display:block;
+    float:left;
+}
