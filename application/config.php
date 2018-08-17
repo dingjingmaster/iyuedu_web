@@ -54,11 +54,11 @@ return [
     // +----------------------------------------------------------------------
 
     // 默认模块名
-    'default_module'         => 'index',
+    'default_module'         => 'novel',
     // 禁止访问模块
-    'deny_module_list'       => ['common'],
+    'deny_module_list'       => ['common', 'extra'],
     // 默认控制器名
-    'default_controller'     => 'Index',
+    'default_controller'     => 'main_Page',
     // 默认操作名
     'default_action'         => 'index',
     // 默认验证器
@@ -68,7 +68,7 @@ return [
     // 操作方法后缀
     'action_suffix'          => '',
     // 自动搜索控制器
-    'controller_auto_search' => false,
+    'controller_auto_search' => true,
 
     // +----------------------------------------------------------------------
     // | URL设置
