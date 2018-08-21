@@ -18,22 +18,34 @@ class MainPage extends Controller {
     }
 
     /* 主页模块 返回数据 */
-    // http://127.0.0.1/novel/main_page/module/m/zbtj
     public function module() {
-        $ret = array();
         $info = array();
         $infoArray = array();
         $detail = new OnlineInfoModel();
-        $moduleName = Request::instance()->param('m');
-        if ($moduleName == 'main') {
-            $info = $detail->novelModule();
+        $moduleName = Request::instance()->param('n');
+        if ('main' == $moduleName) {
+            $info = $detail->mainModule();
             foreach ($info as $m => $ids) {
                 foreach ($ids as $id) {
                     $infoArray[$id] = $detail->novelInfo($id);
                 }
             }
         }
-        $ret = MainShow::showMain($info, $infoArray);
+        $ret = MainShow::showMainModule($info, $infoArray);
         return json_encode($ret);
+    }
+
+    /* 排行榜页面 返回数据 */
+    public function rank() {
+        $infoArray = array();
+        $detail = new OnlineInfoModel();
+        $moduleName = 'rank_' . Request::instance()->param('n');
+        $info = $detail->mainRank($moduleName);
+        foreach ($info[$moduleName] as $id) {
+            $infoArray[$id] = $detail->novelInfo($id);
+        }
+        $ret = MainShow::showMainRank($info, $infoArray);
+
+        echo json_encode($ret);
     }
 }

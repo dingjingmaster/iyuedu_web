@@ -19,6 +19,7 @@ html, body, a, p, img, span, div, ul, li{
   display:block;
 }
 
+/*  */
 .i_head{
   height: 141px;
   width: 1180px;
@@ -120,7 +121,7 @@ html, body, a, p, img, span, div, ul, li{
 }
 
 .i_rank_chose_item {
-  width: 33.33%;
+  width: 50%;
   float: left;
   margin: 0;
   padding: 0;
@@ -192,7 +193,7 @@ html, body, a, p, img, span, div, ul, li{
   cursor: pointer;
   float: right;
   font-size: 18px;
-  display: none;
+  /*display: none;*/
 }
 
 .detail {
