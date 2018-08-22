@@ -60,7 +60,8 @@ html, body, a, p, img, span, div, ul, li{
   height: 60px;
   margin-left: -8px;
   border: 1px;
-  background: url(http://farm1.static.mitang.com/M01/76/AD/pYYBAFXEWJ-AfSsQAAAOFNsvLWo088/search_btn.png) no-repeat;
+  background: url("http://127.0.0.1/public/img/search_btn.png") no-repeat;
+  /*background: url(http://farm1.static.mitang.com/M01/76/AD/pYYBAFXEWJ-AfSsQAAAOFNsvLWo088/search_btn.png) no-repeat;*/
   display: inline-block;
   cursor: pointer;
 }

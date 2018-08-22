@@ -75,45 +75,6 @@ class MainShow {
         }
 
         return $ret;
-
-
-            /*
-            $html = '';
-            foreach ($iv as $id) {
-                $value = $infoArray[$id];
-                if(count($value) <= 0) {
-                    continue;
-                }
-                $html .= '<li class="i_list_item">';
-                if ($first) {
-                    $html .= '<div class="i_sample" style="display:none;">';
-                } else {
-                    $html .= '<div class="i_sample">';
-                }
-                $html .= '<span class="i_num">' . ++$num . '.</span>';
-                $html .= '<span class="i_name">' . $value['name'] . '</span>';
-                $html .= '<p class="i_author">' . $value['author'] . '</p>';
-                $html .= '</div>';
-                if ($first) {
-                    $html .= '<div class="i_detail" style="display:block;">';
-                }else {
-                    $html .= '<div class="i_detail">';
-                }
-                $html .= '<span class="i_num">' . $num . '.</span>';
-                $html .= '<a href="#">';
-                $html .= '<img style="width:100px; height=133px;" src="data:image/' . $value['imgType'] . ';base64,' . $value['imgCotent'] . '"/>';
-                $html .= '</a>';
-                $html .= '<div class="detail">';
-                $html .= '<a href="#">';
-                $html .= '<p class="i_detail_name">' . $value['name'] . '</p>';
-                $html .= '</a>';
-                $html .= '<p class="i_detail_author">' . $value['author'] . '</p>';
-                $html .= '</div></div><div class="i_clear"></div></li>';
-                $first = false;
-            }
-            $ret[$ik] = $html;
-        }
-        */
     }
 
     private static $nameMap = Array(

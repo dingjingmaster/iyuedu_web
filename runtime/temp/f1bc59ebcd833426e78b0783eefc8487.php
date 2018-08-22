@@ -1,6 +1,6 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:55:"E:\GitHub\iyuedu_web\/application/novel/view/index.html";i:1534844648;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:55:"E:\GitHub\iyuedu_web\/application/novel/view/index.html";i:1534860902;}*/ ?>
 <!doctype html>
-<html>
+<html ng-app="app" ng-controller="appCtrl" >
 <head>
     <meta charset="utf-8">
     <title>爱阅读</title>
@@ -17,7 +17,7 @@
     <script src="../../../public/js/common.js" type="text/javascript"></script>
 </head>
 
-<body ng-app="app" onload="init()" style="background-color: #FFFAF0">
+<body data-ng-init="init()" style="background-color: #FFFAF0">
   <div class="i_head">
     <div class="i_head_t">
       <div class="i_head_img">
@@ -44,15 +44,15 @@
     </div>
   </div>
   
-  <div id="index_contain" class="i_contain">
+  <div class="i_contain">
     <div class="i_contain_left">
       
       <div class="i_contain_rank">
         <ul class="i_rank_chose">
-          <li class="i_rank_chose_item cur">人气榜</li>
-          <li class="i_rank_chose_item">完结榜</li>
+            <li class="i_rank_chose_item cur" ng-click="getRank('/novel/main_page/rank/n/rq/')">人气榜</li>
+            <li class="i_rank_chose_item" ng-click="getRank('/novel/main_page/rank/n/wj/')">完结榜</li>
         </ul>
-        <ul ng-cloak class="i_rank_list" ng-controller="rankCtrl">
+        <ul ng-cloak class="i_rank_list">
             <li ng-model="show"
                 class="i_list_item"
                 ng-init="show=novel.show"
@@ -79,25 +79,15 @@
                 </div>
                 <div class="i_clear"></div>
             </li>
-
-
-
-
         </ul>
       </div>
     </div>
 
       <!-- 主页输出推荐 -->
-      <div id="i_contain_right" class="i_contain_right"></div>
+      <div ng-cloak ng-bind-html="mainRec | toHTML" class="i_contain_right"></div>
   </div>
   <div class="i_clear"></div>
-
   <div class="i_footer fix_bottom">
   </div>
-  <script type="text/javascript" defer>
-      init();
-  </script>
-
-  
 </body>
 </html>
