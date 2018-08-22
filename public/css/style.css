@@ -6,8 +6,26 @@
 html, body, a, p, img, span, div, ul, li{
   margin: 0 0 0 0;
   padding: 0 0 0 0;
+  font-family: 楷体;
   text-decoration: none;
   list-style: none outside none;
+}
+a{color: #AB82FF;}
+
+a:link{color:dimgrey;}
+
+a:hover{color: #9932CC;}
+
+small{font-size: 18px;}
+
+h1, h3, p{
+  color: #333333;
+  line-height: 36px;
+  align-items: left;
+}
+h4, h5, h6, span {
+  color: dimgrey;
+  align-items: left;
 }
 /* 按功能定制 */
 .c_write{
@@ -306,7 +324,7 @@ html, body, a, p, img, span, div, ul, li{
 
 .i_rec2_author {
   font-size: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 26px;
   color: #999999;
 }
 
@@ -346,7 +364,21 @@ html, body, a, p, img, span, div, ul, li{
 
 .d_detail_catalog{
   width: 900px;
-  padding: 6px 0 6px 0;
+  padding: 16px 0 6px 36px;
+  font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.d_catalog_table {
+  text-align: left;
+  line-height: 36px;
+}
+
+.i_read_contain {
+  width: 1180px;
+  margin: 60px auto 0 auto;
+  padding-bottom: 200px;
+  font-size: 22px;
+
 }
 
 .d_category_rec {

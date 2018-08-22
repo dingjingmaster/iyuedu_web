@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:55:"E:\GitHub\iyuedu_web\/application/novel/view/index.html";i:1534923178;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:55:"E:\GitHub\iyuedu_web\/application/novel/view/index.html";i:1534953504;}*/ ?>
 <!doctype html>
 <html ng-app="app" ng-controller="appCtrl" >
 <head>
@@ -32,7 +32,7 @@
     <div class="i_head_nav">
       <ul class="i_menu">
         <li class="i_menu_item">
-          <a href="#" class="c_write">首页</a>
+          <a href="<?php echo $host; ?>" class="c_write">首页</a>
         </li>
         <li class="i_menu_item">
           <a href="#" class="c_write">分类</a>
@@ -62,7 +62,7 @@
 
                 <div class="i_sample" ng-show="show.sample">
                     <span class="i_num">{{ novel.num }}</span>
-                    <span class="i_name">{{ novel.name }}</span>
+                    <h4 class="i_name">{{ novel.name }}</h4>
                     <p class="i_author">{{ novel.author }}</p>
                 </div>
                 <div class="i_detail" ng-show="show.detail">
@@ -72,9 +72,9 @@
                     </a>
                     <div class="detail">
                         <a href="{{novel.url}}">
-                            <p class="i_detail_name">{{ novel.name }}</p>
+                            <h6 class="i_detail_name">{{ novel.name }}</h6>
                         </a>
-                        <p class="i_detail_author">{{ novel.author }}</p>
+                        <small class="i_detail_author">{{ novel.author }}</small>
                     </div>
                 </div>
                 <div class="i_clear"></div>

@@ -115,4 +115,42 @@ class OnlineInfoModel extends Model{
 
         return $novelInfo;
     }
+
+    // 查找小说内容
+    public function novelChapter($id, $chapter) {
+        $novelInfo = array();
+        $options = array();
+        $filter = Array('_id' => $id);
+        $mongo = new Manager('mongodb://' . $this->mongoIP . ':' . $this->mongoPort);
+        $query = new Query($filter, $options);
+        $readPreference = new ReadPreference(ReadPreference::RP_PRIMARY);
+
+        $res = $mongo->executeQuery($this->dbname . '.' . $this->cinfo, $query, $readPreference);
+        foreach ($res as $i) {
+            foreach ($i as $ik=>$iv) {
+                if($ik == 'blockId') {
+                    $novelInfo[$ik] = $iv;
+                    break;
+                }
+            }
+        }
+
+        $bids = $novelInfo['blockId'];
+        $chapters = array();
+        foreach($bids as $bid) {
+            $filter = Array('_id' => $bid);
+            $query = new Query($filter, $options);
+            $res = $mongo->executeQuery($this->dbname . '.' . $this->cdata, $query, $readPreference);
+            foreach ($res as $i) {
+                foreach ($i as $ik=>$iv) {
+                    if('chapterContent' == $ik) {
+                        foreach ($iv as $iik=>$iiv) {
+                            $chapters[$iik] = $iiv;
+                        }
+                    }
+                }
+            }
+        }
+        return $chapters[$chapter];
+    }
 }

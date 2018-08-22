@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:56:"E:\GitHub\iyuedu_web\/application/novel/view/detail.html";i:1534932912;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:56:"E:\GitHub\iyuedu_web\/application/novel/view/detail.html";i:1534952307;}*/ ?>
 <!doctype html>
 <html ng-app="app" ng-controller="appCtrl" >
 <head>
@@ -32,7 +32,7 @@
     <div class="i_head_nav">
       <ul class="i_menu">
         <li class="i_menu_item">
-          <a href="#" class="c_write">首页</a>
+          <a href="<?php echo $host; ?>" class="c_write">首页</a>
         </li>
         <li class="i_menu_item">
           <a href="#" class="c_write">分类</a>
@@ -51,27 +51,27 @@
               <img class="d_detail_img" src="<?php echo $img; ?>"/>
               <div class="d_detail_info">
                   <h1><?php echo $name; ?></h1>
-                  <span>作者：<?php echo $author; ?></span><br/>
-                  <span>类型：<?php echo $category; ?></span><br/>
-                  <span>状态：<?php echo $status; ?></span><br/>
-                  <span>阅读量：<?php echo $view; ?></span><br/>
-                  <span>更新时间：<?php echo $update; ?></span><br/>
-                  <span>简介：</span><br/>
-                  <div class="d_detail_desc"><?php echo $desc; ?></div>
+                  <span><strong>作者</strong>：<?php echo $author; ?></span><br/>
+                  <span><strong>类型</strong>：<?php echo $category; ?></span><br/>
+                  <span><strong>状态</strong>：<?php echo $status; ?></span><br/>
+                  <span><strong>阅读量</strong>：<?php echo $view; ?></span><br/>
+                  <span><strong>更新时间</strong>：<?php echo $update; ?></span><br/>
+                  <span><strong>简介</strong>：</span><br/>
+                  <small class="d_detail_desc"><?php echo $desc; ?></small>
               </div>
           </div>
           <div class="i_clear"></div>
           <h3>&nbsp;&nbsp;&nbsp;&nbsp;目录</h3><hr/>
           <div class="d_detail_catalog">
-              <table>
+              <table width="100%">
                   <?php foreach($chapter as $vo): if(count($vo) == 2): ?>
-                  <tr>
-                      <th> <?php echo $vo[0][1]; ?> </th>
-                      <th> <?php echo $vo[1][1]; ?> </th>
+                  <tr align="left" class="d_catalog_table">
+                      <th><a href="/novel/content/content/id/<?php echo $id; ?>/c1/<?php echo $vo[0][1]; ?>/c2/<?php echo $vo[0][0]; ?>/"><?php echo $vo[0][1]; ?></a></th>
+                      <th><a href="/novel/content/content/id/<?php echo $id; ?>/c1/<?php echo $vo[1][1]; ?>/c2/<?php echo $vo[1][0]; ?>/"><?php echo $vo[1][1]; ?></a></th>
                   </tr>
                   <?php elseif(count($vo) == 1): ?>
-                  <tr>
-                      <th> <?php echo $vo[0][1]; ?> </th>
+                  <tr align="left" class="d_catalog_table">
+                      <th><a href="/novel/content/content/id/<?php echo $id; ?>/c1/<?php echo $vo[0][1]; ?>/c2/<?php echo $vo[0][0]; ?>/"><?php echo $vo[0][1]; ?></a></th>
                       <th></th>
                   </tr>
                   <?php endif; endforeach; ?>

@@ -30,6 +30,7 @@ class Detail extends Controller {
         $response = [
             /* host */
             'host'              =>      Util::urlType() . Util::serverIp(),
+            'id'                =>      $novelInfo['_id'],
             'name'              =>      $novelInfo['name'],
             'author'            =>      $novelInfo['author'],
             'category'          =>      $novelInfo['category'],

@@ -23,9 +23,9 @@ class MainShow {
                         continue;
                     }
                     $html .= '<li class="i_rec1_item"><a href="/novel/detail/novel/id/' . $id . '"><img width="150px" height="200px" src="data:image/' . $value['imgType'] . ';base64,' . $value['imgCotent'] .  '"/></a>';
-                    $html .= '<div class="i_rec_info"><a href="/novel/detail/novel/id/' . $id . '"><p class="i_rec_name">' . $value['name'] . '</p></a>';
-                    $html .= '<p class="i_rec_author">' . $value['author'] . '</p>';
-                    $html .= '<p class="i_rec_desc">' .$value['desc'] . '</p>';
+                    $html .= '<div class="i_rec_info"><a href="/novel/detail/novel/id/' . $id . '"><h3 class="i_rec_name">' . $value['name'] . '</h3></a>';
+                    $html .= '<small class="i_rec_author">' . $value['author'] . '</small>';
+                    $html .= '<small class="i_rec_desc">' .$value['desc'] . '</small>';
                     $html .= '</div></li>';
                 }
                 $html .= '</ul></div></div>';
@@ -37,8 +37,8 @@ class MainShow {
                         continue;
                     }
                     $html .= '<li class="i_rec2_item"><a href="/novel/detail/novel/id/' . $id . '"><img width="120px" height="160px" src="data:image/' . $value['imgType'] . ';base64,' . $value['imgCotent'] . '"/></a>';
-                    $html .= '<a href="/novel/detail/novel/id/' . $id . '">' . '<p class="i_rec2_name">' . $value['name'] . '</p></a>';
-                    $html .= '<p class="i_rec2_author">' . $value['author'] . '</p></li>';
+                    $html .= '<a href="/novel/detail/novel/id/' . $id . '">' . '<h5 class="i_rec2_name">' . $value['name'] . '</h5></a>';
+                    $html .= '<small class="i_rec2_author">' . $value['author'] . '</small></li>';
                 }
                 $html .= '</ul></div>';
             }
@@ -87,46 +87,77 @@ class MainShow {
         }
         /* 整理得到正确的顺序 */
         ksort($allChap);
-        $ouArr = array();
-        $jiArr = array();
+        /*  */
+        $tmpArr = array();
         foreach ($allChap as $ik=>$iv) {
-            if ($ik % 2 == 0) {
-                $ououArr = array();
-                array_push($ououArr, $ik);
-                array_push($ououArr, $iv);
-                array_push($ouArr, $ououArr);
-            } else {
-                $jijiArr = array();
-                array_push($jijiArr, $ik);
-                array_push($jijiArr, $iv);
-                array_push($jiArr, $jijiArr);
-            }
+            array_push($tmpArr, $ik . '{]' . $iv);
         }
+
+        $flag = true;
+        $oneArr = array();
+        $twoArr = array();
+        for($i = 0; $i < count($tmpArr); ++$i) {
+            if($flag) {
+                $ttArr = array();
+                $arr = explode('{]', $tmpArr[$i]);
+                $ttArr[0] = $arr[0];
+                $ttArr[1] = $arr[1];
+                array_push($oneArr, $ttArr);
+                if($i + 1 < count($tmpArr)) {
+                    $arr = explode('{]', $tmpArr[$i + 1]);
+                    $ttArr[0] = $arr[0];
+                    $ttArr[1] = $arr[1];
+                    array_push($twoArr, $ttArr);
+                }
+                $flag = false;
+                continue;
+            }
+            $flag = true;
+        }
+
         /* 重新整理 */
         $min = 0;
-        if(count($ouArr) > count($jiArr)) {
-            $min = count($jiArr);
+        if(count($oneArr) >= count($twoArr)) {
+            $min = count($twoArr);
         } else {
-            $min = count($ouArr);
+            $min = count($oneArr);
         }
         for($i = 0; $i < $min; ++$i) {
             $tt = array();
-            array_push($tt, $ouArr[$i]);
-            array_push($tt, $jiArr[$i]);
+            array_push($tt, $oneArr[$i]);
+            array_push($tt, $twoArr[$i]);
             array_push($retArr, $tt);
         }
         // 最后一个特殊元素
-        if(count($ouArr) > $min) {
+        if(count($oneArr) > $min) {
             $tt = array();
-            array_push($tt, $ouArr[$i]);
+            array_push($tt, $oneArr[$i]);
             array_push($retArr, $tt);
-        } else if (count($jiArr) > $min) {
+        } else if (count($twoArr) > $min) {
             $tt = array();
-            array_push($tt, $jiArr[$i]);
+            array_push($tt, $twoArr[$i]);
             array_push($retArr, $tt);
         }
 
         return $retArr;
+    }
+
+    public static function contentShow($content) {
+        $retArr = array();
+        $str = '';
+        foreach (str_split($content) as $ik=>$iv) {
+            if("\n" == $iv) {
+                array_push($retArr, $str);
+                $str = '';
+            }
+            $str .= $iv;
+        }
+        $str = '';
+        foreach ($retArr as $ik=>$iv) {
+            $str .= '<p>' . $iv . '</p><br>';
+        }
+
+        return $str;
     }
 
     private static $nameMap = Array(
