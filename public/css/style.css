@@ -231,10 +231,7 @@ html, body, a, p, img, span, div, ul, li{
 
 .i_rec1_list {
   overflow: hidden;
-  padding-top: 35px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 20px;
+  padding: 35px 30px 20px 30px;
 }
 
 .i_rec1_item {
@@ -243,7 +240,6 @@ html, body, a, p, img, span, div, ul, li{
   margin-right: 30px;
   display: list-item;
   list-style: none outside none;
-  
 }
 
 .i_rec_info {
@@ -303,9 +299,8 @@ html, body, a, p, img, span, div, ul, li{
 
 .i_rec2_name {
   width: 120px;
-  margin: 10px 0;
+  margin: 10px 0 5px;
   font-size: 16px;
-  margin-bottom: 5px;
   color: #9400D3;
 }
 
@@ -321,4 +316,41 @@ html, body, a, p, img, span, div, ul, li{
   bottom: 0;
   background-color: #FFFAF0;
   position: relative;
+}
+
+.d_detail {
+  width: 900px;
+  margin: 60px 0 0 0;
+  float: left;
+}
+
+.d_detail_img {
+  width: 200px;
+  height: 270px;
+  margin: 8px 6px 8px 26px;
+  float: left;
+  display: inline-block;
+}
+
+.d_detail_info {
+  margin: 8px 6px 8px 26px;
+  float: left;
+}
+
+.d_detail_desc{
+  width: 560px;
+  height: 90px;
+  padding: 2px 0 1px 0;
+  overflow:hidden;
+}
+
+.d_detail_catalog{
+  width: 900px;
+  padding: 6px 0 6px 0;
+}
+
+.d_category_rec {
+  width: 256px;
+  margin: 60px 0 0 0;
+  float: right;
 }

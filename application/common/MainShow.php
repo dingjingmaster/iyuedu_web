@@ -22,8 +22,8 @@ class MainShow {
                     if (count($value) <= 0) {
                         continue;
                     }
-                    $html .= '<li class="i_rec1_item"><a href=""><img width="150px" height="200px" src="data:image/' . $value['imgType'] . ';base64,' . $value['imgCotent'] .  '"/></a>';
-                    $html .= '<div class="i_rec_info"><a href=""><p class="i_rec_name">' . $value['name'] . '</p></a>';
+                    $html .= '<li class="i_rec1_item"><a href="/novel/detail/novel/id/' . $id . '"><img width="150px" height="200px" src="data:image/' . $value['imgType'] . ';base64,' . $value['imgCotent'] .  '"/></a>';
+                    $html .= '<div class="i_rec_info"><a href="/novel/detail/novel/id/' . $id . '"><p class="i_rec_name">' . $value['name'] . '</p></a>';
                     $html .= '<p class="i_rec_author">' . $value['author'] . '</p>';
                     $html .= '<p class="i_rec_desc">' .$value['desc'] . '</p>';
                     $html .= '</div></li>';
@@ -36,8 +36,8 @@ class MainShow {
                     if(count($value) <= 0) {
                         continue;
                     }
-                    $html .= '<li class="i_rec2_item"><a href=""><img width="120px" height="160px" src="data:image/' . $value['imgType'] . ';base64,' . $value['imgCotent'] . '"/></a>';
-                    $html .= '<a href="">' . '<p class="i_rec2_name">' . $value['name'] . '</p></a>';
+                    $html .= '<li class="i_rec2_item"><a href="/novel/detail/novel/id/' . $id . '"><img width="120px" height="160px" src="data:image/' . $value['imgType'] . ';base64,' . $value['imgCotent'] . '"/></a>';
+                    $html .= '<a href="/novel/detail/novel/id/' . $id . '">' . '<p class="i_rec2_name">' . $value['name'] . '</p></a>';
                     $html .= '<p class="i_rec2_author">' . $value['author'] . '</p></li>';
                 }
                 $html .= '</ul></div>';
@@ -67,6 +67,7 @@ class MainShow {
                 $infoTmp['num'] = ++ $num;
                 $infoTmp['name'] = $value['name'];
                 $infoTmp['author'] = $value['author'];
+                $infoTmp['url'] = '/novel/detail/novel/id/' . $id;
                 $infoTmp['imgSrc'] = 'data:image/' . $value['imgType'] . ';base64,' . $value['imgCotent'];
                 $infoTmp['show'] = $sample;
 
@@ -75,6 +76,57 @@ class MainShow {
         }
 
         return $ret;
+    }
+
+    public static function chapterShow($chapters) {
+        $retArr = array();
+        $allChap = array();
+        foreach ($chapters as $ik=>$iv) {
+            $arr = explode('{]', $iv);
+            $allChap[$arr[0]] = $arr[1];
+        }
+        /* 整理得到正确的顺序 */
+        ksort($allChap);
+        $ouArr = array();
+        $jiArr = array();
+        foreach ($allChap as $ik=>$iv) {
+            if ($ik % 2 == 0) {
+                $ououArr = array();
+                array_push($ououArr, $ik);
+                array_push($ououArr, $iv);
+                array_push($ouArr, $ououArr);
+            } else {
+                $jijiArr = array();
+                array_push($jijiArr, $ik);
+                array_push($jijiArr, $iv);
+                array_push($jiArr, $jijiArr);
+            }
+        }
+        /* 重新整理 */
+        $min = 0;
+        if(count($ouArr) > count($jiArr)) {
+            $min = count($jiArr);
+        } else {
+            $min = count($ouArr);
+        }
+        for($i = 0; $i < $min; ++$i) {
+            $tt = array();
+            array_push($tt, $ouArr[$i]);
+            array_push($tt, $jiArr[$i]);
+            array_push($retArr, $tt);
+        }
+        // 最后一个特殊元素
+        if(count($ouArr) > $min) {
+            $tt = array();
+            array_push($tt, $ouArr[$i]);
+            array_push($retArr, $tt);
+        } else if (count($jiArr) > $min) {
+            $tt = array();
+            array_push($tt, $jiArr[$i]);
+            array_push($retArr, $tt);
+        }
+
+        return $retArr;
     }
 
     private static $nameMap = Array(

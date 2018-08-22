@@ -16,7 +16,7 @@
     <script src="{$host}/public/js/common.js" type="text/javascript"></script>
 </head>
 
-<body data-ng-init="mainInit()" style="background-color: #FFFAF0">
+<body data-ng-init="detailInit()" style="background-color: #FFFAF0">
   <div class="i_head">
     <div class="i_head_t">
       <div class="i_head_img">
@@ -42,51 +42,47 @@
       </ul>
     </div>
   </div>
-  
+
+  <!-- 主要内容开始 -->
   <div class="i_contain">
-    <div class="i_contain_left">
-      
-      <div class="i_contain_rank">
-        <ul class="i_rank_chose">
-            <li class="i_rank_chose_item cur" ng-click="getRank('/novel/main_page/rank/n/rq/')">人气榜</li>
-            <li class="i_rank_chose_item" ng-click="getRank('/novel/main_page/rank/n/wj/')">完结榜</li>
-        </ul>
-        <ul ng-cloak class="i_rank_list">
-            <li ng-model="show"
-                class="i_list_item"
-                ng-init="show=novel.show"
-                ng-repeat="novel in novels track by novel.num"
-                ng-mouseenter="show={detail:true, sample:false}"
-                ng-mouseleave="show={detail:false, sample:true}">
-
-                <div class="i_sample" ng-show="show.sample">
-                    <span class="i_num">{{ novel.num }}</span>
-                    <span class="i_name">{{ novel.name }}</span>
-                    <p class="i_author">{{ novel.author }}</p>
-                </div>
-                <div class="i_detail" ng-show="show.detail">
-                    <span class="i_num">{{ novel.num }}</span>
-                    <a ng-href="{{novel.url}}">
-                        <img style="width:100px; height:133px;" ng-src="{{ novel.imgSrc }}" title="{{ novel.name }}"/>
-                    </a>
-                    <div class="detail">
-                        <a href="{{novel.url}}">
-                            <p class="i_detail_name">{{ novel.name }}</p>
-                        </a>
-                        <p class="i_detail_author">{{ novel.author }}</p>
-                    </div>
-                </div>
-                <div class="i_clear"></div>
-            </li>
-        </ul>
+      <div class="d_detail">
+          <div>
+              <img class="d_detail_img" src="{$img}"/>
+              <div class="d_detail_info">
+                  <h1>{$name}</h1>
+                  <span>作者：{$author}</span><br/>
+                  <span>类型：{$category}</span><br/>
+                  <span>状态：{$status}</span><br/>
+                  <span>阅读量：{$view}</span><br/>
+                  <span>更新时间：{$update}</span><br/>
+                  <span>简介：</span><br/>
+                  <div class="d_detail_desc">{$desc}</div>
+              </div>
+          </div>
+          <div class="i_clear"></div>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;目录</h3><hr/>
+          <div class="d_detail_catalog">
+              <table>
+                  {foreach $chapter as $vo}
+                  {if condition="count($vo) eq 2"}
+                  <tr>
+                      <th> {$vo[0][1]} </th>
+                      <th> {$vo[1][1]} </th>
+                  </tr>
+                  {elseif condition="count($vo) eq 1" /}
+                  <tr>
+                      <th> {$vo[0][1]} </th>
+                      <th></th>
+                  </tr>
+                  {/if}
+                  {/foreach}
+              </table>
+          </div>
       </div>
-    </div>
+      <div class="d_category_rec"></div>
 
-      <!-- 主页输出推荐 -->
-      <div ng-cloak ng-bind-html="mainRec | toHTML" class="i_contain_right"></div>
   </div>
   <div class="i_clear"></div>
-  <div class="i_footer fix_bottom">
-  </div>
+  <div class="i_footer fix_bottom"></div>
 </body>
 </html>

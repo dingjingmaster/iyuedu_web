@@ -18,6 +18,13 @@ class Util {
             || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')) ? 'https://' : 'http://';
         return $http_type;
     }
+    public static function timeStr($time) {
+        $year = substr($time, 0, 4);
+        $month = substr($time, 4, 2);
+        $day = substr($time, 6, 2);
+
+        return $year . '-' . $month . '-' .$day;
+    }
 
 }
 

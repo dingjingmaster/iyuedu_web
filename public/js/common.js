@@ -10,7 +10,7 @@ $(document).ready(function(){
 var app = angular.module('app', []).controller('appCtrl', function($scope, $http) {
 
     /* 主页初始化请求 */
-    $scope.init = function () {
+    $scope.mainInit = function () {
         /* 初始化排行榜 */
         this.getRank('/novel/main_page/rank/n/rq/');
         /* 初始化主页模块 */
@@ -46,28 +46,6 @@ app.filter('toHTML', ['$sce', function ($sce) {
         return $sce.trustAsHtml(text);
     };
 }]);
-
-// function init() {
-//   /* 主页各个模块展示 */
-//   $.get('/novel/main_page/module/n/main/', function (data, status) {
-//         if ('success' == status) {
-//             var html = "";
-//             var json = JSON.parse(data);
-//             html += json['module_zbtj'];
-//             for (var key in json) {
-//                 if ('module_zbtj' == key) {
-//                     continue;
-//                 }
-//                 html += json[key];
-//             }
-//             document.getElementById('i_contain_right').innerHTML = html;
-//         }
-//     });
-//
-//   /* 主页榜单展示 */
-//  // main_rank('/novel/main_page/rank/n/rq/');
-// }
-
 
 
 
