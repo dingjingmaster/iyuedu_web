@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:55:"E:\GitHub\iyuedu_web\/application/novel/view/index.html";i:1535005864;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:58:"E:\GitHub\iyuedu_web\/application/novel/view/category.html";i:1535008257;}*/ ?>
 <!doctype html>
 <html ng-app="app" ng-controller="appCtrl" >
 <head>
@@ -46,45 +46,13 @@
   
   <div class="i_contain">
     <div class="i_contain_left">
-      
-      <div class="i_contain_rank">
-        <ul class="i_rank_chose">
-            <li class="i_rank_chose_item cur" ng-click="getRank('/novel/main_page/rank/n/rq/')">人气榜</li>
-            <li class="i_rank_chose_item" ng-click="getRank('/novel/main_page/rank/n/wj/')">完结榜</li>
-        </ul>
-        <ul ng-cloak class="i_rank_list">
-            <li ng-model="show"
-                class="i_list_item"
-                ng-init="show=novel.show"
-                ng-repeat="novel in novels track by novel.num"
-                ng-mouseenter="show={detail:true, sample:false}"
-                ng-mouseleave="show={detail:false, sample:true}">
-
-                <div class="i_sample" ng-show="show.sample">
-                    <span class="i_num">{{ novel.num }}</span>
-                    <h4 class="i_name">{{ novel.name }}</h4>
-                    <p class="i_author">{{ novel.author }}</p>
-                </div>
-                <div class="i_detail" ng-show="show.detail">
-                    <span class="i_num">{{ novel.num }}</span>
-                    <a ng-href="{{novel.url}}">
-                        <img style="width:100px; height:133px;" ng-src="{{ novel.imgSrc }}" title="{{ novel.name }}"/>
-                    </a>
-                    <div class="detail">
-                        <a href="{{novel.url}}">
-                            <h6 class="i_detail_name">{{ novel.name }}</h6>
-                        </a>
-                        <p class="i_detail_author">{{ novel.author }}</p>
-                    </div>
-                </div>
-                <div class="i_clear"></div>
-            </li>
-        </ul>
-      </div>
+        <div class="i_category_list"><?php echo $category; ?></div>
     </div>
 
       <!-- 主页输出推荐 -->
-      <div ng-cloak ng-bind-html="mainRec | toHTML" class="i_contain_right"></div>
+      <div class="i_contain_right">
+          <div class="i_category_books"><?php echo $books; ?></div>
+      </div>
   </div>
   <div class="i_clear"></div>
   <div class="i_footer fix_bottom">

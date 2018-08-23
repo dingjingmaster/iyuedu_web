@@ -398,3 +398,13 @@ tr {
   margin: 60px 0 0 0;
   float: right;
 }
+
+/* 分类页面 */
+.i_category_list {
+  padding: 6px;
+}
+
+.i_category_books {
+  width: 900px;
+  padding: 6px;
+}

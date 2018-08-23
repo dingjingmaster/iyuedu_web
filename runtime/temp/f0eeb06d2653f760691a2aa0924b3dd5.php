@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:56:"E:\GitHub\iyuedu_web\/application/novel/view/detail.html";i:1534996818;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:56:"E:\GitHub\iyuedu_web\/application/novel/view/detail.html";i:1535005854;}*/ ?>
 <!doctype html>
 <html ng-app="app" ng-controller="appCtrl" >
 <head>
@@ -35,7 +35,7 @@
           <a href="<?php echo $host; ?>" class="c_write">首页</a>
         </li>
         <li class="i_menu_item">
-          <a href="#" class="c_write">分类</a>
+          <a href="/novel/category/init/" class="c_write">分类</a>
         </li>
         <li class="i_menu_item">
           <a href="#" class="c_write">榜单</a>

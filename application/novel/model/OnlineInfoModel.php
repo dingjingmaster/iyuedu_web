@@ -94,7 +94,6 @@ class OnlineInfoModel extends Model{
                 $novelInfo[$ik] = $iv;
             }
         }
-
         $bids = $novelInfo['blockId'];
         $chapters = array();
         foreach($bids as $bid) {
@@ -174,5 +173,45 @@ class OnlineInfoModel extends Model{
         }
 
         return $novels;
+    }
+
+    /* 小说分类 */
+    public function novelCategory() {
+        $categorys = array();
+        $options = array();
+        $filter = Array('_id' => 'detail');
+        $mongo = new Manager('mongodb://' . $this->mongoIP . ':' . $this->mongoPort);
+        $query = new Query($filter, $options);
+        $readPreference = new ReadPreference(ReadPreference::RP_PRIMARY);
+        $res = $mongo->executeQuery($this->dbname . '.' . $this->csummary, $query, $readPreference);
+        foreach ($res as $i) {
+            foreach ($i ->category as $k => $v) {
+                array_push($categorys, $v);
+            }
+        }
+        $categorys = array_unique($categorys);
+        sort($categorys);
+        return $categorys;
+    }
+
+    /* 获取某类别的小说 */
+    public function getCategoryNovel($category) {
+        $retInfo = array();
+        $options = array();
+        $filter = Array('category' => $category);
+        $mongo = new Manager('mongodb://' . $this->mongoIP . ':' . $this->mongoPort);
+        $query = new Query($filter, $options);
+        $readPreference = new ReadPreference(ReadPreference::RP_PRIMARY);
+        $res = $mongo->executeQuery($this->dbname . '.' . $this->cinfo, $query, $readPreference);
+        foreach ($res as $i) {
+            $novelInfo = array();
+            foreach ($i as $ik=>$iv) {
+                $novelInfo[$ik] = $iv;
+            }
+            if(count($novelInfo) > 0) {
+                array_push($retInfo, $novelInfo);
+            }
+        }
+        return $retInfo;
     }
 }
