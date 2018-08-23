@@ -10,12 +10,8 @@ html, body, a, p, img, span, div, ul, li{
   text-decoration: none;
   list-style: none outside none;
 }
-a{color: #AB82FF;}
-
-a:link{color:dimgrey;}
-
-a:hover{color: #4dad4d;}
-
+a{color: dimgrey;}
+a:hover{color: #AB82FF;}
 small{font-size: 18px;}
 
 h1, h3, p{
@@ -27,6 +23,16 @@ h4, h5, h6, span {
   color: dimgrey;
   align-items: left;
 }
+
+th {
+  color: #9932CC;
+  font-family: 楷体, "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+tr {
+  margin: 10px 0 10px 0;
+}
+
 /* 按功能定制 */
 .c_write{
   color:aliceblue;
@@ -77,7 +83,7 @@ h4, h5, h6, span {
 .i_search_btn {
   width: 46px;
   height: 40px;
-  margin-left: -10px;
+  margin-left: -15px;
   border-radius:4px;
   background: #9400D3 url("http://127.0.0.1/public/img/search_btn.png") no-repeat center;
   display: inline-block;
@@ -377,6 +383,14 @@ h4, h5, h6, span {
   padding-bottom: 200px;
   font-size: 22px;
 
+}
+
+.i_search_result {
+  width: 100%;
+  padding: 8px;
+  margin-top: 30px;
+  font-size: 18px;
+  font-family: 楷体, "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .d_category_rec {

@@ -8,8 +8,8 @@
 namespace app\novel\model;
 use MongoDB\Driver\Manager;
 use MongoDB\Driver\Query;
+use MongoDB\BSON\Regex;
 use MongoDB\Driver\ReadPreference;
-use think\Db;
 use think\Model;
 
 class OnlineInfoModel extends Model{
@@ -134,7 +134,6 @@ class OnlineInfoModel extends Model{
                 }
             }
         }
-
         $bids = $novelInfo['blockId'];
         $chapters = array();
         foreach($bids as $bid) {
@@ -152,5 +151,28 @@ class OnlineInfoModel extends Model{
             }
         }
         return $chapters[$chapter];
+    }
+
+    /* 根据关键词查找小说 */
+    public function novelQuery($queryName){
+        $novels = array();
+        $options = array();
+        $filter = Array('name' => new Regex($queryName));
+        $mongo = new Manager('mongodb://' . $this->mongoIP . ':' . $this->mongoPort);
+        $query = new Query($filter, $options);
+        $readPreference = new ReadPreference(ReadPreference::RP_PRIMARY);
+
+        $res = $mongo->executeQuery($this->dbname . '.' . $this->cinfo, $query, $readPreference);
+        foreach ($res as $i) {
+            $novelInfo = array();
+            foreach ($i as $ik=>$iv) {
+                $novelInfo[$ik] = $iv;
+            }
+            if(count($novelInfo) > 0) {
+                array_push($novels, $novelInfo);
+            }
+        }
+
+        return $novels;
     }
 }

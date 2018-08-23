@@ -39,6 +39,14 @@ var app = angular.module('app', []).controller('appCtrl', function($scope, $http
     $scope.mousePass = function () {
         return {detail:!$scope.show.detail, sample:!$scope.show.sample};
     };
+
+    /* 搜索请求 */
+    $scope.searchBook = function (host, query) {
+        if (undefined === query || null == query || "" === query) {
+            return;
+        }
+        window.location.href="javascript:location.href='" + host + "/novel/search/book/query/" + query + "'";
+    }
 });
 
 app.filter('toHTML', ['$sce', function ($sce) {

@@ -45,42 +45,7 @@
 
   <!-- 主要内容开始 -->
   <div class="i_contain">
-      <div class="d_detail">
-          <div>
-              <img class="d_detail_img" src="{$img}"/>
-              <div class="d_detail_info">
-                  <h1>{$name}</h1>
-                  <span><strong>作者</strong>：{$author}</span><br/>
-                  <span><strong>类型</strong>：{$category}</span><br/>
-                  <span><strong>状态</strong>：{$status}</span><br/>
-                  <span><strong>阅读量</strong>：{$view}</span><br/>
-                  <span><strong>更新时间</strong>：{$update}</span><br/>
-                  <span><strong>简介</strong>：</span><br/>
-                  <small class="d_detail_desc">{$desc}</small>
-              </div>
-          </div>
-          <div class="i_clear"></div>
-          <h3>&nbsp;&nbsp;&nbsp;&nbsp;目录</h3><hr/>
-          <div class="d_detail_catalog">
-              <table width="100%">
-                  {foreach $chapter as $vo}
-                  {if condition="count($vo) eq 2"}
-                  <tr align="left" class="d_catalog_table">
-                      <th><a href="/novel/content/content/id/{$id}/c1/{$vo[0][1]}/c2/{$vo[0][0]}/">{$vo[0][1]}</a></th>
-                      <th><a href="/novel/content/content/id/{$id}/c1/{$vo[1][1]}/c2/{$vo[1][0]}/">{$vo[1][1]}</a></th>
-                  </tr>
-                  {elseif condition="count($vo) eq 1" /}
-                  <tr align="left" class="d_catalog_table">
-                      <th><a href="/novel/content/content/id/{$id}/c1/{$vo[0][1]}/c2/{$vo[0][0]}/">{$vo[0][1]}</a></th>
-                      <th></th>
-                  </tr>
-                  {/if}
-                  {/foreach}
-              </table>
-          </div>
-      </div>
-      <div class="d_category_rec"></div>
-
+      <div class="i_search_result">{$searchResult}</div>
   </div>
   <div class="i_clear"></div>
   <div class="i_footer fix_bottom"></div>
