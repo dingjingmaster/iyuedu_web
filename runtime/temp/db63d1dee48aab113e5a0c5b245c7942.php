@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:58:"E:\GitHub\iyuedu_web\/application/novel/view/category.html";i:1535008257;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:58:"E:\GitHub\iyuedu_web\/application/novel/view/category.html";i:1535012501;}*/ ?>
 <!doctype html>
 <html ng-app="app" ng-controller="appCtrl" >
 <head>
@@ -52,6 +52,7 @@
       <!-- 主页输出推荐 -->
       <div class="i_contain_right">
           <div class="i_category_books"><?php echo $books; ?></div>
+          <div class="i_category_split"><?php echo $pageSplit; ?></div>
       </div>
   </div>
   <div class="i_clear"></div>

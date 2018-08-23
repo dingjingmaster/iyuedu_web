@@ -42,7 +42,13 @@ tr {
   clear:both;
   display:block;
 }
-
+/* 分页定制 */
+li.page_turn {
+  text-align: center;
+  float: left;
+  margin: 6px;
+  /*list-style-type: none;*/
+}
 /*  */
 .i_head{
   height: 141px;
@@ -401,10 +407,14 @@ tr {
 
 /* 分类页面 */
 .i_category_list {
-  padding: 6px;
+  margin: 16px 6px 28px 0;
 }
 
 .i_category_books {
   width: 900px;
   padding: 6px;
+}
+
+.i_category_split {
+  margin: 9px 0 0 86px;
 }
