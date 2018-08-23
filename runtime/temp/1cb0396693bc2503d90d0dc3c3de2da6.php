@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:56:"E:\GitHub\iyuedu_web\/application/novel/view/search.html";i:1535005870;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:56:"E:\GitHub\iyuedu_web\/application/novel/view/search.html";i:1535016672;}*/ ?>
 <!doctype html>
 <html ng-app="app" ng-controller="appCtrl" >
 <head>
@@ -47,6 +47,7 @@
   <!-- 主要内容开始 -->
   <div class="i_contain">
       <div class="i_search_result"><?php echo $searchResult; ?></div>
+      <div class="i_category_split"><?php echo $pageSplit; ?></div>
   </div>
   <div class="i_clear"></div>
   <div class="i_footer fix_bottom"></div>

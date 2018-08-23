@@ -26,6 +26,11 @@ class Util {
         return $year . '-' . $month . '-' .$day;
     }
 
+    /* 0与正整数下限 */
+    public static function integerFloor($int) {
+        return $int < 0 ? 0 : $int;
+    }
+
     /* 分页功能 */
     /**
      *  @$curPage:          当前页数
@@ -33,7 +38,7 @@ class Util {
      *  @$showPage:         一次显示页数
      *  @$everyPageNum:     每页展示条数
      */
-    public static function pageSplit($category, $curPage, $totalNum, $showPage, $everyPageNum) {
+    public static function pageSplit($url, $category, $curPage, $totalNum, $showPage, $everyPageNum) {
         $html = '<ul style="margin: 0 auto;">';
         $totalPage = ceil($totalNum / $everyPageNum);                       // 总页数
         /* 当前页数格式化 */
@@ -42,10 +47,10 @@ class Util {
         } else if ($curPage >= $totalPage) {
             $curPage = $totalPage;
         }
-        $html .= '<li class="page_turn"><a href="/novel/category/category/c/' . $category . '/cur/0/">首页</a></li>';
+        $html .= '<li class="page_turn"><a href="' . $url . '/' . $category . '/cur/0/">首页</a></li>';
         $prePage = ($curPage <= 1) ? 1 : $curPage - 1;                              // 前一页
         $nextPage = ($curPage >= $totalPage) ? $totalPage : $curPage + 1;           // 后一页
-        $html .= '<li class="page_turn "><a href="/novel/category/category/c/' . $category . '/cur/' . $prePage . '">上一页</a></li>';                  // 前一页展示
+        $html .= '<li class="page_turn "><a href="' . $url . '/' . $category . '/cur/' . $prePage . '">上一页</a></li>';                  // 前一页展示
         /* 展示显示分页 */
         $ps = floor($showPage / 2);
         $pt = $curPage - $ps;
@@ -56,15 +61,15 @@ class Util {
         /* 开始准备输出页数 */
         for($i = $pageShowStart; $i <= $pageShowEnd; ++$i) {
             if($curPage == $i) {
-                $html .= '<li class="page_turn"><a style="color: #9400D3" href="/novel/category/category/c/' . $category . '/cur/' . $i . '">'  . $i . '</a></li>';
+                $html .= '<li class="page_turn"><a style="color: #9400D3" href="' . $url . '/' . $category . '/cur/' . $i . '">'  . $i . '</a></li>';
             } else {
-                $html .= '<li class="page_turn"><a href="/novel/category/category/c/' . $category . '/cur/' . $i . '">'  . $i . '</a></li>';
+                $html .= '<li class="page_turn"><a href="' . $url . '/' . $category . '/cur/' . $i . '">'  . $i . '</a></li>';
             }
         }
-        $html .= '<li class="page_turn"><a href="/novel/category/category/c/' . $category . '/cur/' . $nextPage . '">下一页</a></li>';
-        $html .= '<li class="page_turn"><a href="/novel/category/category/c/' . $category . '/cur/' . $totalPage . '">末页</a></li>';
+        $html .= '<li class="page_turn"><a href="' . $url . '/' . $category . '/cur/' . $nextPage . '">下一页</a></li>';
+        $html .= '<li class="page_turn"><a href="' . $url . '/' . $category . '/cur/' . $totalPage . '">末页</a></li>';
         $html .= '<li class="page_turn"><a>第' . $curPage . '/' . $totalPage . '页</a></li>';
-        $html .= '<li class="page_turn"><a>共' . $totalNum . '本小说</a></li>';
+        $html .= '<li class="page_turn"><a>共计' . $totalNum . '行数据</a></li>';
         $html .= '</ul>';
         return $html;
     }

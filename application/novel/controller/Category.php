@@ -26,7 +26,7 @@ class Category extends Controller {
             'host'              =>      Util::urlType() . Util::serverIp(),
             'category'          =>      MainShow::novelCategory($category),
             'books'             =>      MainShow::searchShow($ret),
-            'pageSplit'         =>      Util::pageSplit($category[0], $curPage, $totalNum, $this->showPage, $this->everyPage),
+            'pageSplit'         =>      Util::pageSplit($this->baseUrl, $category[0], $curPage, $totalNum, $this->showPage, $this->everyPage),
         ];
         $this->assign($response);
         return $this->fetch(ROOT_PATH . '/application/novel/view/category.html');
@@ -41,19 +41,21 @@ class Category extends Controller {
         /* 翻页功能 */
         $totalNum = count($ret);
         $curItem = ($curPage - 1) * $this->everyPage;
+        $curItem = Util::integerFloor($curItem);
         $ret = array_slice($ret, $curItem, $this->everyPage);
 
         $response = [
             'host'              =>      Util::urlType() . Util::serverIp(),
             'category'          =>      MainShow::novelCategory($category),
             'books'             =>      MainShow::searchShow($ret),
-            'pageSplit'         =>      Util::pageSplit($categoryName, $curPage, $totalNum, $this->showPage, $this->everyPage),
+            'pageSplit'         =>      Util::pageSplit($this->baseUrl, $categoryName, $curPage, $totalNum, $this->showPage, $this->everyPage),
         ];
         $this->assign($response);
         return $this->fetch(ROOT_PATH . '/application/novel/view/category.html');
     }
 
     /* 参数设置 */
+    private $baseUrl = '/novel/category/category/c';
     private $everyPage = 12;            // 每页展示条数
     private $showPage = 5;              // 显示页数
 }

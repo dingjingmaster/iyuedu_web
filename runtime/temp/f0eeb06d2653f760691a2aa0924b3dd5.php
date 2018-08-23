@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:56:"E:\GitHub\iyuedu_web\/application/novel/view/detail.html";i:1535005854;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:56:"E:\GitHub\iyuedu_web\/application/novel/view/detail.html";i:1535015444;}*/ ?>
 <!doctype html>
 <html ng-app="app" ng-controller="appCtrl" >
 <head>
@@ -61,7 +61,7 @@
               </div>
           </div>
           <div class="i_clear"></div>
-          <h3>&nbsp;&nbsp;&nbsp;&nbsp;目录</h3><hr/>
+          <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;目录</h3><hr/>
           <div class="d_detail_catalog">
               <table width="100%">
                   <?php foreach($chapter as $vo): if(count($vo) == 2): ?>
@@ -77,6 +77,7 @@
                   <?php endif; endforeach; ?>
               </table>
           </div>
+          <div class="i_category_split"><?php echo $pageSplit; ?></div>
       </div>
       <div class="d_category_rec"></div>
 
