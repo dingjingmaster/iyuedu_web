@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:55:"E:\GitHub\iyuedu_web\/application/novel/view/index.html";i:1534953504;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:55:"E:\GitHub\iyuedu_web\/application/novel/view/index.html";i:1534991065;}*/ ?>
 <!doctype html>
 <html ng-app="app" ng-controller="appCtrl" >
 <head>
@@ -21,7 +21,7 @@
   <div class="i_head">
     <div class="i_head_t">
       <div class="i_head_img">
-        <img src="https://farm4.static.mitang.com/M00/B8/F8/sIYBAFsLw7OAU5jlAAAUNUHMJhE969/爱阅读官网logo.png">
+        <img style="width: 165px; height: 56px;" src="<?php echo $host; ?>/public/img/logo.png">
       </div>
       <div class="i_search">
         <input class="i_search_name" type="text" placeholder="请输入书名"/>
@@ -74,7 +74,7 @@
                         <a href="{{novel.url}}">
                             <h6 class="i_detail_name">{{ novel.name }}</h6>
                         </a>
-                        <small class="i_detail_author">{{ novel.author }}</small>
+                        <p class="i_detail_author">{{ novel.author }}</p>
                     </div>
                 </div>
                 <div class="i_clear"></div>

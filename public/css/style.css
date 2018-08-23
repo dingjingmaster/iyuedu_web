@@ -6,7 +6,7 @@
 html, body, a, p, img, span, div, ul, li{
   margin: 0 0 0 0;
   padding: 0 0 0 0;
-  font-family: 楷体;
+  font-family: 楷体, "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-decoration: none;
   list-style: none outside none;
 }
@@ -14,7 +14,7 @@ a{color: #AB82FF;}
 
 a:link{color:dimgrey;}
 
-a:hover{color: #9932CC;}
+a:hover{color: #4dad4d;}
 
 small{font-size: 18px;}
 
@@ -129,7 +129,7 @@ h4, h5, h6, span {
 
 .i_contain_rank {
   width: 258px;
-  margin: 2px 0 1px 0px;
+  margin: 2px 0 1px 0;
 }
 
 .i_rank_chose {
@@ -210,7 +210,6 @@ h4, h5, h6, span {
   cursor: pointer;
   float: right;
   font-size: 18px;
-  /*display: none;*/
 }
 
 .detail {
@@ -365,7 +364,6 @@ h4, h5, h6, span {
 .d_detail_catalog{
   width: 900px;
   padding: 16px 0 6px 36px;
-  font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .d_catalog_table {
