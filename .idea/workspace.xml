@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1a13b08-d5a7-4b57-8e4f-f65b275107a9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/application/novel/model/OnlineInfoModel.php" afterPath="$PROJECT_DIR$/application/novel/model/OnlineInfoModel.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,11 +39,21 @@
       <file leaf-file-name="OnlineInfoModel.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/novel/model/OnlineInfoModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="201" column="107" lean-forward="false" selection-start-line="201" selection-start-column="107" selection-end-line="201" selection-end-column="107" />
+            <state relative-caret-position="3724">
+              <caret line="201" column="83" lean-forward="false" selection-start-line="201" selection-start-column="83" selection-end-line="201" selection-end-column="83" />
               <folding>
                 <element signature="e#117#144#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainPage.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/novel/controller/MainPage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="26" column="34" lean-forward="false" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -148,7 +157,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="166" />
+    <option name="x" value="630" />
+    <option name="y" value="129" />
     <option name="width" value="1696" />
     <option name="height" value="766" />
   </component>
@@ -187,6 +197,13 @@
               <item name="iyuedu_web" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="novel" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="iyuedu_web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iyuedu_web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="novel" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="controller" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="iyuedu_web" type="b2602c69:ProjectViewProjectNode" />
@@ -248,15 +265,15 @@
       <workItem from="1535092478618" duration="4411000" />
       <workItem from="1535100023856" duration="46000" />
       <workItem from="1535104577319" duration="1088000" />
-      <workItem from="1535112433075" duration="2393000" />
+      <workItem from="1535112433075" duration="4823000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62347000" />
+    <option name="totallyTimeSpent" value="64777000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="166" width="1696" height="766" extended-state="0" />
+    <frame x="630" y="129" width="1696" height="766" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17298289" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -581,13 +598,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/novel/controller/MainPage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1957">
@@ -643,10 +653,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/novel/controller/MainPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="26" column="34" lean-forward="false" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/novel/model/OnlineInfoModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="201" column="107" lean-forward="false" selection-start-line="201" selection-start-column="107" selection-end-line="201" selection-end-column="107" />
+        <state relative-caret-position="3724">
+          <caret line="201" column="83" lean-forward="false" selection-start-line="201" selection-start-column="83" selection-end-line="201" selection-end-column="83" />
           <folding>
             <element signature="e#117#144#0#PHP" expanded="true" />
           </folding>

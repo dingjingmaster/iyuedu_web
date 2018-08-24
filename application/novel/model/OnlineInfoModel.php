@@ -26,7 +26,7 @@ class OnlineInfoModel extends Model{
 
         $options = array();
         $filter = Array('_id' => 'detail');
-        $mongo = new Manager('mongodb://novel:123456@' . $this->mongoIP . ':' . $this->mongoPort . '/admin');
+        $mongo = new Manager('mongodb://' . $this->mongoIP . ':' . $this->mongoPort);
         $query = new Query($filter, $options);
         $readPreference = new ReadPreference(ReadPreference::RP_PRIMARY);
         $res = $mongo->executeQuery($this->dbname . '.' . $this->csummary, $query, $readPreference);
@@ -46,7 +46,7 @@ class OnlineInfoModel extends Model{
 
         $options = array();
         $filter = Array('_id' => 'detail');
-        $mongo = new Manager('mongodb://novel:123456@' . $this->mongoIP . ':' . $this->mongoPort . '/admin');
+        $mongo = new Manager('mongodb://' . $this->mongoIP . ':' . $this->mongoPort);
         $query = new Query($filter, $options);
         $readPreference = new ReadPreference(ReadPreference::RP_PRIMARY);
         $res = $mongo->executeQuery($this->dbname . '.' . $this->csummary, $query, $readPreference);
@@ -66,7 +66,7 @@ class OnlineInfoModel extends Model{
         $retInfo = array();
         $options = array();
         $filter = Array('_id' => $id);
-        $mongo = new Manager('mongodb://novel:123456@' . $this->mongoIP . ':' . $this->mongoPort . '/admin');
+        $mongo = new Manager('mongodb://' . $this->mongoIP . ':' . $this->mongoPort);
         $query = new Query($filter, $options);
         $readPreference = new ReadPreference(ReadPreference::RP_PRIMARY);
         $res = $mongo->executeQuery($this->dbname . '.' . $this->cinfo, $query, $readPreference);
@@ -84,7 +84,7 @@ class OnlineInfoModel extends Model{
         $novelInfo = array();
         $options = array();
         $filter = Array('_id' => $id);
-        $mongo = new Manager('mongodb://novel:123456@' . $this->mongoIP . ':' . $this->mongoPort . '/admin');
+        $mongo = new Manager('mongodb://' . $this->mongoIP . ':' . $this->mongoPort);
         $query = new Query($filter, $options);
         $readPreference = new ReadPreference(ReadPreference::RP_PRIMARY);
 
@@ -120,7 +120,7 @@ class OnlineInfoModel extends Model{
         $novelInfo = array();
         $options = array();
         $filter = Array('_id' => $id);
-        $mongo = new Manager('mongodb://novel:123456@' . $this->mongoIP . ':' . $this->mongoPort . '/admin');
+        $mongo = new Manager('mongodb://' . $this->mongoIP . ':' . $this->mongoPort);
         $query = new Query($filter, $options);
         $readPreference = new ReadPreference(ReadPreference::RP_PRIMARY);
 
@@ -157,7 +157,7 @@ class OnlineInfoModel extends Model{
         $novels = array();
         $options = array();
         $filter = Array('name' => new Regex($queryName));
-        $mongo = new Manager('mongodb://novel:123456@' . $this->mongoIP . ':' . $this->mongoPort . '/admin');
+        $mongo = new Manager('mongodb://' . $this->mongoIP . ':' . $this->mongoPort);
         $query = new Query($filter, $options);
         $readPreference = new ReadPreference(ReadPreference::RP_PRIMARY);
 
@@ -180,7 +180,7 @@ class OnlineInfoModel extends Model{
         $categorys = array();
         $options = array();
         $filter = Array('_id' => 'detail');
-        $mongo = new Manager('mongodb://novel:123456@' . $this->mongoIP . ':' . $this->mongoPort . '/admin');
+        $mongo = new Manager('mongodb://' . $this->mongoIP . ':' . $this->mongoPort);
         $query = new Query($filter, $options);
         $readPreference = new ReadPreference(ReadPreference::RP_PRIMARY);
         $res = $mongo->executeQuery($this->dbname . '.' . $this->csummary, $query, $readPreference);
@@ -199,7 +199,7 @@ class OnlineInfoModel extends Model{
         $retInfo = array();
         $options = array();
         $filter = Array('category' => $category);
-        $mongo = new Manager('mongodb://novel:123456@' . $this->mongoIP . ':' . $this->mongoPort . '/admin');
+        $mongo = new Manager('mongodb://' . $this->mongoIP . ':' . $this->mongoPort);
         $query = new Query($filter, $options);
         $readPreference = new ReadPreference(ReadPreference::RP_PRIMARY);
         $res = $mongo->executeQuery($this->dbname . '.' . $this->cinfo, $query, $readPreference);
