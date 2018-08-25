@@ -386,7 +386,7 @@ li.page_turn {
 .i_read_contain {
   width: 1180px;
   margin: 60px auto 0 auto;
-  padding-bottom: 200px;
+  padding: 0 8px 9px 100px;
   font-size: 22px;
 
 }
