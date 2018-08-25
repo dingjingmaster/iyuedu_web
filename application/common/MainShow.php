@@ -157,20 +157,25 @@ class MainShow {
         foreach ($retArr as $ik=>$iv) {
             $str .= '<p>' . $iv . '</p><br>';
         }
-        $str .= '<hr/>';
+        $str .= '<hr/><div align="center">';
         if('' != $content['beforeKey']) {
             $arr = explode('{]', $content['beforeKey']);
-            $str .= '<div align="center"><a href="/novel/content/content/id/' . $id . '/c1/' . $arr[1] . '/c2/' . $arr[0] . '/">上一章</a>';
+            $str .= '<a href="/novel/content/content/id/' . $id . '/c1/' . $arr[1] . '/c2/' . $arr[0] . '/">上一章</a>';
         } else {
-            $str .= '<div align="center"><a href="#">上一章</a>';
+            $str .= '<a href="#">上一章</a>';
         }
+        // 首页
+        $str .= '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/">首页</a>';
+        // 目录页
+        $str .= '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://enjoyread.top/novel/detail/novel/id/' . $id . '">目录页</a>';
 
         if('' != $content['afterKey']) {
             $arr = explode('{]', $content['afterKey']);
-            $str .= '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/novel/content/content/id/' . $id . '/c1/' . $arr[1] . '/c2/' . $arr[0] . '/">下一章</a></div>';
+            $str .= '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/novel/content/content/id/' . $id . '/c1/' . $arr[1] . '/c2/' . $arr[0] . '/">下一章</a>';
         } else {
-            $str .= '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">下一章</a></div>';
+            $str .= '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">下一章</a>';
         }
+        $str .= '</div>';
 
         return $str;
     }
