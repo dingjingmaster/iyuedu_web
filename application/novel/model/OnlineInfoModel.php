@@ -14,7 +14,7 @@ use think\Model;
 
 class OnlineInfoModel extends Model{
     private $mongoIP = '127.0.0.1';
-    private $mongoPort = 1888;
+    private $mongoPort = 27017;//1888;
     private $dbname = 'novel_online';
     private $csummary = "online_info";
     private $cinfo = 'online_index';
@@ -135,6 +135,7 @@ class OnlineInfoModel extends Model{
         }
         $bids = $novelInfo['blockId'];
         $chapters = array();
+        $chapSort = array();
         foreach($bids as $bid) {
             $filter = Array('_id' => $bid);
             $query = new Query($filter, $options);
@@ -143,13 +144,40 @@ class OnlineInfoModel extends Model{
                 foreach ($i as $ik=>$iv) {
                     if('chapterContent' == $ik) {
                         foreach ($iv as $iik=>$iiv) {
+                            $aarr = explode('{]', $iik);
                             $chapters[$iik] = $iiv;
+                            $chapSort[$aarr[0]] = $aarr[1];
                         }
                     }
                 }
             }
         }
-        return $chapters[$chapter];
+        $arr = explode('{]', $chapter);
+        ksort($chapSort);
+        // 取前一个
+        $cb = "";
+        // 取后一章
+        $cn = "";
+        $allkeys = array_keys($chapSort);
+        $cck = array_keys($allkeys, $arr[0])[0];
+        if(array_key_exists($cck - 1,$allkeys)) {
+            $cb = $allkeys[$cck - 1];
+        }
+        if(array_key_exists($cck + 1,$allkeys)) {
+            $cn = $allkeys[$cck + 1];
+        }
+        // 得到key
+        if('' != $cb) {
+            $cb .= '{]' . $chapSort[$cb];
+        }
+        if('' != $cn) {
+            $cn .= '{]' . $chapSort[$cn];
+        }
+        $carr = array();
+        $carr['beforeKey'] = $cb;
+        $carr['afterKey'] = $cn;
+        $carr['content'] = $chapters[$chapter];
+        return $carr;
     }
 
     /* 根据关键词查找小说 */

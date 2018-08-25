@@ -142,10 +142,11 @@ class MainShow {
         return $retArr;
     }
 
-    public static function contentShow($content) {
+    public static function contentShow($id, $content) {
+        // 处理内容展示
         $retArr = array();
         $str = '';
-        foreach (str_split($content) as $ik=>$iv) {
+        foreach (str_split($content['content']) as $ik=>$iv) {
             if("\n" == $iv) {
                 array_push($retArr, $str);
                 $str = '';
@@ -155,6 +156,20 @@ class MainShow {
         $str = '';
         foreach ($retArr as $ik=>$iv) {
             $str .= '<p>' . $iv . '</p><br>';
+        }
+        $str .= '<hr/>';
+        if('' != $content['beforeKey']) {
+            $arr = explode('{]', $content['beforeKey']);
+            $str .= '<div align="center"><a href="/novel/content/content/id/' . $id . '/c1/' . $arr[1] . '/c2/' . $arr[0] . '/">上一章</a>';
+        } else {
+            $str .= '<div align="center"><a href="#">上一章</a>';
+        }
+
+        if('' != $content['afterKey']) {
+            $arr = explode('{]', $content['afterKey']);
+            $str .= '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/novel/content/content/id/' . $id . '/c1/' . $arr[1] . '/c2/' . $arr[0] . '/">下一章</a></div>';
+        } else {
+            $str .= '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">下一章</a></div>';
         }
 
         return $str;

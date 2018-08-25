@@ -19,9 +19,8 @@ class Content extends Controller {
         $c1 = Request::instance()->param('c1');
         $c2 = Request::instance()->param('c2');
         $novelModel = new OnlineInfoModel();
-        $chapter = $novelModel->novelChapter($novelID, $c2 . '{]' . $c1);
-        $content = MainShow::contentShow($chapter);
-
+        $content = $novelModel->novelChapter($novelID, $c2 . '{]' . $c1);
+        $content = MainShow::contentShow($novelID, $content);
         $response = [
             /* host */
             'host'              =>      Util::urlType() . Util::serverIp(),
