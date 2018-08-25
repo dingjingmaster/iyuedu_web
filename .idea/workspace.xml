@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1a13b08-d5a7-4b57-8e4f-f65b275107a9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/application/common/MainShow.php" afterPath="$PROJECT_DIR$/application/common/MainShow.php" />
-      <change beforePath="$PROJECT_DIR$/application/novel/controller/Content.php" afterPath="$PROJECT_DIR$/application/novel/controller/Content.php" />
       <change beforePath="$PROJECT_DIR$/application/novel/model/OnlineInfoModel.php" afterPath="$PROJECT_DIR$/application/novel/model/OnlineInfoModel.php" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/4dcbde8455a1969b2e9f460609f57dc0.php" afterPath="$PROJECT_DIR$/runtime/temp/4dcbde8455a1969b2e9f460609f57dc0.php" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/f0eeb06d2653f760691a2aa0924b3dd5.php" afterPath="$PROJECT_DIR$/runtime/temp/f0eeb06d2653f760691a2aa0924b3dd5.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OnlineInfoModel.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="OnlineInfoModel.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/novel/model/OnlineInfoModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="160" column="41" lean-forward="false" selection-start-line="160" selection-start-column="41" selection-end-line="160" selection-end-column="41" />
+            <state relative-caret-position="209">
+              <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
               <folding>
                 <element signature="e#117#144#0#PHP" expanded="true" />
               </folding>
@@ -53,10 +48,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainShow.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainShow.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/common/MainShow.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="557">
+            <state relative-caret-position="1412">
               <caret line="173" column="0" lean-forward="true" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
               <folding>
                 <marker date="1535195731885" expanded="true" signature="904:948" ph="data:" />
@@ -116,9 +111,9 @@
         <option value="$PROJECT_DIR$/application/novel/view/detail.html" />
         <option value="$PROJECT_DIR$/application/novel/view/content.html" />
         <option value="$PROJECT_DIR$/application/novel/view/category.html" />
-        <option value="$PROJECT_DIR$/application/novel/model/OnlineInfoModel.php" />
         <option value="$PROJECT_DIR$/application/novel/controller/Content.php" />
         <option value="$PROJECT_DIR$/application/common/MainShow.php" />
+        <option value="$PROJECT_DIR$/application/novel/model/OnlineInfoModel.php" />
       </list>
     </option>
   </component>
@@ -260,12 +255,12 @@
       <workItem from="1535100023856" duration="46000" />
       <workItem from="1535104577319" duration="1088000" />
       <workItem from="1535112433075" duration="4823000" />
-      <workItem from="1535192003935" duration="3769000" />
+      <workItem from="1535192003935" duration="3815000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68546000" />
+    <option name="totallyTimeSpent" value="68592000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="652" y="125" width="1696" height="923" extended-state="0" />
@@ -644,16 +639,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/novel/model/OnlineInfoModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="160" column="41" lean-forward="false" selection-start-line="160" selection-start-column="41" selection-end-line="160" selection-end-column="41" />
-          <folding>
-            <element signature="e#117#144#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/novel/controller/Content.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
@@ -664,7 +649,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/common/MainShow.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
+        <state relative-caret-position="1412">
           <caret line="173" column="0" lean-forward="true" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
           <folding>
             <marker date="1535195731885" expanded="true" signature="904:948" ph="data:" />
@@ -678,6 +663,16 @@
             <marker date="1535195731885" expanded="true" signature="6440:6446" ph=" " />
             <marker date="1535195731885" expanded="true" signature="6446:6452" ph=" " />
             <marker date="1535195731885" expanded="true" signature="6995:7035" ph="data:" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/novel/model/OnlineInfoModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <folding>
+            <element signature="e#117#144#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
