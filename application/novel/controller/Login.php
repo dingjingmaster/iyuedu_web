@@ -31,4 +31,6 @@ class Login extends Controller {
         $this->assign($response);
         return $this->fetch(ROOT_PATH . '/application/novel/view/register.html');
     }
+
+    /* 邮箱验证 */
 }

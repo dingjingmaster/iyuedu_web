@@ -23,11 +23,11 @@
       <h3 style="color: #9932CC;">爱阅读新用户注册</h3>
       <nobr><p>用户名:&nbsp;<input class="reg_input" type="text" ng-model="regName" placeholder="用户名" ng-blur="name_input()"/>&nbsp;&nbsp;<label style="color: #9932CC" ng-model="regNameL">{{regNameL}}</label></p></nobr>
       <nobr><p>邮&nbsp;&nbsp;箱:&nbsp;<input class="reg_input" type="text" ng-model="regMail" placeholder="请输入邮箱" ng-blur="mail_input()"/>&nbsp;&nbsp;<label style="color: #9932CC" ng-model="regMailL">{{regMailL}}</label></p></nobr>
-      <nobr><p>密&nbsp;&nbsp;码:&nbsp;<input class="reg_input" type="text" ng-model="regPasswd1" placeholder="请输入密码" ng-blur="passwd1_input()"/>&nbsp;&nbsp;<label style="color: #9932CC" ng-model="regPasswd1L">{{regPasswd1L}}</label></p></nobr>
-      <nobr><p>密&nbsp;&nbsp;码:&nbsp;<input class="reg_input" type="text" ng-model="regPasswd2" placeholder="请再次输入密码" ng-blur="passwd2_input()"/>&nbsp;&nbsp;<label style="color: #9932CC" ng-model="regPasswd2L">{{regPasswd2L}}</label></p></nobr>
+      <nobr><p>密&nbsp;&nbsp;码:&nbsp;<input class="reg_input" type="password" ng-model="regPasswd1" placeholder="请输入密码" ng-blur="passwd1_input()"/>&nbsp;&nbsp;<label style="color: #9932CC" ng-model="regPasswd1L">{{regPasswd1L}}</label></p></nobr>
+      <nobr><p>密&nbsp;&nbsp;码:&nbsp;<input class="reg_input" type="password" ng-model="regPasswd2" placeholder="请再次输入密码" ng-blur="passwd2_input()"/>&nbsp;&nbsp;<label style="color: #9932CC" ng-model="regPasswd2L">{{regPasswd2L}}</label></p></nobr>
       <br/>
       <div style="margin-left: 98px;" align="center">
-          <a ng-click="register_clear()">重置</a>&nbsp;&nbsp;&nbsp;&nbsp;<a ng-model="registerOk">注册</a>
+          <a ng-click="register_clear()">重置</a>&nbsp;&nbsp;&nbsp;&nbsp;<a ng-click="register_ok()">注册</a>
       </div>
   </div>
   <div class="i_clear"></div>
