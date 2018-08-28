@@ -1,5 +1,7 @@
 <?php
 namespace app\common;
+use PHPMailer\PHPMailer;
+use PHPMailer\Exception;
 /**
  * Created by PhpStorm.
  * User: DingJing
@@ -8,6 +10,44 @@ namespace app\common;
  */
 
 class Util {
+
+    public static function sendMail($to, $userName, $content){
+        $mail = new PHPMailer(true);
+        try {
+            //Server settings
+            $mail->SMTPDebug = 2;                                   // Enable verbose debug output
+            $mail->isSMTP();                                        // Set mailer to use SMTP
+            $mail->Host = 'smtp.sina.com';                          // Specify main and backup SMTP servers
+            $mail->SMTPAuth = true;                                // Enable SMTP authentication
+            $mail->Username = 'enjoyreadtop@sina.com';              // SMTP username
+            $mail->Password = 'dingjing1009.';                      // SMTP password
+            $mail->SMTPSecure = 'tls';                              // Enable TLS encryption, `ssl` also accepted
+            $mail->Port = 587;                                      // TCP port to connect to
+            $mail->CharSet = 'utf8';
+
+            //Recipients
+            $mail->setFrom('enjoyreadtop@sina.com', '爱阅读');
+            $mail->addAddress($to, $userName);
+
+            //Content
+            $mail->isHTML(true);                                  // Set email format to HTML
+            $mail->Subject = '“爱阅读”账号激活';
+            $mail->Body    = '<style>h3,p{color:#9932CC;font-size:20px;font-family:楷体,"Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;}'.
+                'p{font-weight:600;line-height:60px;}</style>'.
+                '<h3>'.$userName . '你好！</h3><br/><p>' .
+                '&nbsp;&nbsp;&nbsp;&nbsp; 感谢您选择“爱阅读”，此邮箱账号同时也作为您的登录账号，通过此账号，'.
+                '我们会帮您记录您的阅读进度和阅读习惯，进而为您定制个性化推荐，请您一定要妥善保管。'.
+                '为了确保您正常使用我们的服务，请您务必在 1 天内进行账户激活。</p>'.
+                '<p>激活办法：将以下链接复制到浏览器，然后按下 enter 键即可！</p>'.
+                '<p>&nbsp;'.$content . '</p>';
+
+            $mail->send();
+        } catch (Exception $e) {
+            return false;
+        }
+        return true;
+    }
+
     public static function serverIp() {
         $host = isset($_SERVER['HTTP_X_FORWARDED_HOST']) ?
             $_SERVER['HTTP_X_FORWARDED_HOST'] : (isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : '');

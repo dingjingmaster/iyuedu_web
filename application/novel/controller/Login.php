@@ -33,4 +33,8 @@ class Login extends Controller {
     }
 
     /* 邮箱验证 */
+    public function email() {
+        //($to, $userName, $emailTitle, $content)
+        Util::sendMail("dingjing@live.cn", "dj", "测试标题", "测试内容");
+    }
 }
