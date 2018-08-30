@@ -41,7 +41,6 @@ class UserModel extends Model {
      */
     /* 注册数据 -- 检查id是否存在 是否注册成功 */
     public function register($mail, $user, $passwd, $pm) {
-        $ret = array();
         $retCode = UserModel::RET_ERROR_OTHER;
         if ("" == $mail || "" == $user || "" == $passwd || "" == $pm) {
             return $retCode;
