@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1a13b08-d5a7-4b57-8e4f-f65b275107a9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/application/common/Util.php" afterPath="$PROJECT_DIR$/application/common/Util.php" />
-      <change beforePath="$PROJECT_DIR$/application/config.php" afterPath="$PROJECT_DIR$/application/config.php" />
-      <change beforePath="$PROJECT_DIR$/application/novel/controller/Login.php" afterPath="$PROJECT_DIR$/application/novel/controller/Login.php" />
+      <change beforePath="$PROJECT_DIR$/application/novel/model/OnlineInfoModel.php" afterPath="$PROJECT_DIR$/application/novel/model/OnlineInfoModel.php" />
       <change beforePath="$PROJECT_DIR$/application/novel/model/UserModel.php" afterPath="$PROJECT_DIR$/application/novel/model/UserModel.php" />
-      <change beforePath="$PROJECT_DIR$/application/novel/view/index.html" afterPath="$PROJECT_DIR$/application/novel/view/index.html" />
-      <change beforePath="$PROJECT_DIR$/application/novel/view/login.html" afterPath="$PROJECT_DIR$/application/novel/view/login.html" />
-      <change beforePath="$PROJECT_DIR$/public/js/login.js" afterPath="$PROJECT_DIR$/public/js/login.js" />
-      <change beforePath="$PROJECT_DIR$/public/js/register.js" afterPath="$PROJECT_DIR$/public/js/register.js" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/b3b72d96519f38f6e683e1a6cdecb434.php" afterPath="$PROJECT_DIR$/runtime/temp/b3b72d96519f38f6e683e1a6cdecb434.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,16 +17,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3762">
-              <caret line="206" column="22" lean-forward="true" selection-start-line="206" selection-start-column="22" selection-end-line="206" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/novel/view/login.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -64,12 +46,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="search.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/novel/view/search.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="551">
               <caret line="29" column="12" lean-forward="false" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OnlineInfoModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/novel/model/OnlineInfoModel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserModel.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/novel/model/UserModel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+              <folding>
+                <element signature="e#118#150#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -159,7 +163,6 @@
         <option value="$PROJECT_DIR$/application/novel/view/category.html" />
         <option value="$PROJECT_DIR$/application/novel/controller/Content.php" />
         <option value="$PROJECT_DIR$/application/common/MainShow.php" />
-        <option value="$PROJECT_DIR$/application/novel/model/OnlineInfoModel.php" />
         <option value="$PROJECT_DIR$/public/js/common.js" />
         <option value="$PROJECT_DIR$/application/novel/view/register.html" />
         <option value="$PROJECT_DIR$/thinkphp/convention.php" />
@@ -174,11 +177,12 @@
         <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/public/js/register.js" />
         <option value="$PROJECT_DIR$/public/js/login.js" />
-        <option value="$PROJECT_DIR$/application/novel/model/UserModel.php" />
         <option value="$PROJECT_DIR$/application/novel/controller/Login.php" />
         <option value="$PROJECT_DIR$/application/config.php" />
         <option value="$PROJECT_DIR$/application/novel/view/index.html" />
         <option value="$PROJECT_DIR$/application/novel/view/login.html" />
+        <option value="$PROJECT_DIR$/application/novel/model/OnlineInfoModel.php" />
+        <option value="$PROJECT_DIR$/application/novel/model/UserModel.php" />
       </list>
     </option>
   </component>
@@ -203,9 +207,9 @@
       <path value="$PROJECT_DIR$/vendor/topthink/think-image" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="-157" />
-    <option name="y" value="249" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="305" />
+    <option name="y" value="108" />
     <option name="width" value="1697" />
     <option name="height" value="831" />
   </component>
@@ -246,6 +250,13 @@
               <item name="iyuedu_web" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="novel" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="iyuedu_web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iyuedu_web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="novel" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="model" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="iyuedu_web" type="b2602c69:ProjectViewProjectNode" />
@@ -334,15 +345,15 @@
       <workItem from="1535335946263" duration="4080000" />
       <workItem from="1535435128033" duration="19156000" />
       <workItem from="1535505644042" duration="20077000" />
-      <workItem from="1535596299097" duration="1757000" />
+      <workItem from="1535596299097" duration="1864000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128906000" />
+    <option name="totallyTimeSpent" value="129013000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-157" y="249" width="1697" height="831" extended-state="1" />
+    <frame x="305" y="108" width="1697" height="831" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18448381" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -589,13 +600,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="627" column="32" lean-forward="true" selection-start-line="627" selection-start-column="32" selection-end-line="627" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/novel/model/OnlineInfoModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1140">
-          <caret line="107" column="25" lean-forward="true" selection-start-line="107" selection-start-column="25" selection-end-line="107" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -620,16 +625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
           <caret line="73" column="40" lean-forward="false" selection-start-line="73" selection-start-column="40" selection-end-line="73" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/novel/model/UserModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="133" column="36" lean-forward="true" selection-start-line="133" selection-start-column="36" selection-end-line="133" selection-end-column="36" />
-          <folding>
-            <element signature="e#118#150#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -737,6 +732,24 @@
         <state relative-caret-position="551">
           <caret line="29" column="12" lean-forward="false" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/novel/model/OnlineInfoModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/novel/model/UserModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+          <folding>
+            <element signature="e#118#150#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

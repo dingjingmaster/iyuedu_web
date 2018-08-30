@@ -16,7 +16,7 @@ use MongoDB\Driver\ReadPreference;
 
 class UserModel extends Model {
     private $mongoIP = '127.0.0.1';
-    private $mongoPort = 27017;//1888;
+    private $mongoPort = 1888;
     private $dbname = 'novel_online';
     private $userInfo = "user_info";
     private $bookShelfMax = 1000;               // 书架最多

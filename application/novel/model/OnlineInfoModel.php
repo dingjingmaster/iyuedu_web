@@ -14,7 +14,7 @@ use think\Model;
 
 class OnlineInfoModel extends Model{
     private $mongoIP = '127.0.0.1';
-    private $mongoPort = 27017;//1888;
+    private $mongoPort = 1888;
     private $dbname = 'novel_online';
     private $csummary = "online_info";
     private $cinfo = 'online_index';
