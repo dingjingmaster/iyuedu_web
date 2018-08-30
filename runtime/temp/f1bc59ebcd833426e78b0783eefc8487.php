@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:55:"E:\GitHub\iyuedu_web\/application/novel/view/index.html";i:1535099333;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:55:"E:\GitHub\iyuedu_web\/application/novel/view/index.html";i:1535615934;}*/ ?>
 <!doctype html>
 <html ng-app="app" ng-controller="appCtrl" >
 <head>
@@ -18,6 +18,9 @@
     <!-- 谷歌分析 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124579177-1"></script>
     <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-124579177-1');</script>
+    <!-- 广告 -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({google_ad_client: "ca-pub-8080155533523922", enable_page_level_ads: true});</script>
 </head>
 
 <body data-ng-init="mainInit()" style="background-color: #FFFAF0">
@@ -43,13 +46,18 @@
         <li class="i_menu_item">
           <a href="#" class="c_write">榜单</a>
         </li>
+          <li class="i_login_status <?php echo $showLog; ?>">
+              <nobr><a href="/novel/login/loginHTML/" class="c_write">登录</a>|<a href="/novel/login/registerHTML/" class="c_write">注册</a></nobr>
+          </li>
+          <li class="i_login_status <?php echo $showLogged; ?>">
+              <nobr><a href="#" class="c_write"><?php echo $userName; ?>&nbsp;已登录</a></nobr>
+          </li>
       </ul>
     </div>
   </div>
   
   <div class="i_contain">
     <div class="i_contain_left">
-      
       <div class="i_contain_rank">
         <ul class="i_rank_chose">
             <li class="i_rank_chose_item cur" ng-click="getRank('/novel/main_page/rank/n/rq/')">人气榜</li>

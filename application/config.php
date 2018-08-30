@@ -15,9 +15,9 @@ return [
     // +----------------------------------------------------------------------
 
     // 应用调试模式
-    'app_debug'              => true,
+    'app_debug'              => false,
     // 应用Trace
-    'app_trace'              => true,
+    'app_trace'              => false,
     // 应用模式状态
     'app_status'             => '',
     // 是否支持多模块
@@ -202,6 +202,7 @@ return [
         'id'             => '',
         // SESSION_ID的提交变量,解决flash上传跨域
         'var_session_id' => '',
+        'expire'              =>  86400,     // 过期时间
         // SESSION 前缀
         'prefix'         => 'think',        // 指明作用域
         // 驱动方式 支持redis memcache memcached

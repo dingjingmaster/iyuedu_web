@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:55:"E:\GitHub\iyuedu_web\/application/novel/view/login.html";i:1535539123;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:55:"E:\GitHub\iyuedu_web\/application/novel/view/login.html";i:1535609086;}*/ ?>
 <!doctype html>
 <html>
 <head>
@@ -13,9 +13,6 @@
     <!-- 谷歌分析 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124579177-1"></script>
     <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-124579177-1');</script>
-    <!-- 广告 -->
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({google_ad_client: "ca-pub-8080155533523922", enable_page_level_ads: true});</script>
 </head>
 
 <body ng-app="login" style="background-color: #FFFAF0">

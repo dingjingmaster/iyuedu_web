@@ -41,6 +41,7 @@ class UserModel extends Model {
      */
     /* 注册数据 -- 检查id是否存在 是否注册成功 */
     public function register($mail, $user, $passwd, $pm) {
+        $ret = array();
         $retCode = UserModel::RET_ERROR_OTHER;
         if ("" == $mail || "" == $user || "" == $passwd || "" == $pm) {
             return $retCode;
@@ -125,7 +126,8 @@ class UserModel extends Model {
 
     /* 是否登录成功 */
     public function loginOK($mail, $pwd) {
-        $retCode = UserModel::RET_ERROR_OTHER;
+        $ret = array();
+        $ret['retCode'] = UserModel::RET_ERROR_OTHER;
         $options = array();
         $filter = Array('_id'=> $mail);
         $mongo = new Manager('mongodb://' . $this->mongoIP . ':' . $this->mongoPort);
@@ -134,12 +136,13 @@ class UserModel extends Model {
         $res = $mongo->executeQuery($this->dbname . '.' . $this->userInfo, $query, $readPreference)->toArray();
         if(count($res) >= 1) {
             if ($pwd == $res[0]->passwd) {
-                $retCode = UserModel::RET_OK;
+                $ret['retCode'] = UserModel::RET_OK;
+                $ret['user'] = $res[0]->user;
             }
         } else {
-            $retCode = UserModel::RET_ERROR_NOID;
+            $ret['retCode'] = UserModel::RET_ERROR_NOID;
         }
-        return $retCode;
+        return $ret;
     }
 
     /* 查询书架 -- 按时间分段 */

@@ -66,6 +66,8 @@ class Controller
                 $this->beforeAction($method, $options);
             }
         }
+
+        // 检查 session 是否过期
     }
 
     /**

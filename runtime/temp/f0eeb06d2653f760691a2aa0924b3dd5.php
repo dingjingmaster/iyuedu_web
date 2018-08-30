@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:56:"E:\GitHub\iyuedu_web\/application/novel/view/detail.html";i:1535099365;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:56:"E:\GitHub\iyuedu_web\/application/novel/view/detail.html";i:1535618376;}*/ ?>
 <!doctype html>
 <html ng-app="app" ng-controller="appCtrl" >
 <head>
@@ -46,6 +46,12 @@
         <li class="i_menu_item">
           <a href="#" class="c_write">榜单</a>
         </li>
+          <li class="i_login_status <?php echo $showLog; ?>">
+              <nobr><a href="/novel/login/loginHTML/" class="c_write">登录</a>|<a href="/novel/login/registerHTML/" class="c_write">注册</a></nobr>
+          </li>
+          <li class="i_login_status <?php echo $showLogged; ?>">
+              <nobr><a href="#" class="c_write"><?php echo $userName; ?>&nbsp;已登录</a></nobr>
+          </li>
       </ul>
     </div>
   </div>

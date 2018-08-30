@@ -36,7 +36,6 @@ class OnlineInfoModel extends Model{
                 $retModule[$k] = array_slice($arr, 0, 10, true);
             }
         }
-
         return $retModule;
     }
 

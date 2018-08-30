@@ -5,13 +5,19 @@ use \think\Controller;
 use app\common\Util;
 use app\common\MainShow;
 use app\novel\model\OnlineInfoModel;
+use think\Session;
 
 class MainPage extends Controller {
     /* 主页 展示主页 */
     public function index() {
+        $showLog = Session::has('user')?'i_hidden':'i_show';
+        $showLogged = Session::has('user')?'i_show':'i_hidden';
+        $userName = Session::has('user')?Session::get('user.name'):'';
         $response = [
-            /* host */
             'host'              =>      Util::urlType() . Util::serverIp(),
+            'showLogged'        =>      $showLogged,
+            'showLog'           =>      $showLog,
+            'userName'          =>      $userName,
         ];
         $this->assign($response);
         return $this->fetch(ROOT_PATH . '/application/novel/view/index.html');

@@ -9,13 +9,17 @@
 namespace app\novel\controller;
 use  think\Request;
 use \think\Controller;
+use \think\Session;
 use app\common\Util;
 use app\common\MainShow;
 use app\novel\model\OnlineInfoModel;
 
 class Search extends Controller {
     public function book() {
-        /* 查找名字 */
+        $showLog = Session::has('user')?'i_hidden':'i_show';
+        $showLogged = Session::has('user')?'i_show':'i_hidden';
+        $userName = Session::has('user')?Session::get('user.name'):'';
+
         $queryName = Request::instance()->param('query');
         $curPage = Request::instance()->param('cur');
         $novelModel = new OnlineInfoModel();
@@ -40,10 +44,12 @@ class Search extends Controller {
         }
 
         $response = [
-            /* host */
             'host'              =>      Util::urlType() . Util::serverIp(),
             'searchResult'      =>      $html,
             'pageSplit'         =>      $pageSplit,
+            'showLogged'        =>      $showLogged,
+            'showLog'           =>      $showLog,
+            'userName'          =>      $userName,
         ];
         $this->assign($response);
         return $this->fetch(ROOT_PATH . '/application/novel/view/search.html');

@@ -7,28 +7,28 @@
  */
 
 namespace app\novel\controller;
+use think\Session;
 use  think\Request;
-use \think\Controller;
 use app\common\Util;
+use \think\Controller;
 use app\novel\model\UserModel;
-use think\response\Json;
 
 
 class Login extends Controller {
     const RET_OK    = 0;
     const RET_ERROR =   -1;
     public function loginHTML () {
+
         $response = [
-            /* host */
             'host'              =>      Util::urlType() . Util::serverIp(),
         ];
+
         $this->assign($response);
         return $this->fetch(ROOT_PATH . '/application/novel/view/login.html');
     }
 
     public function registerHTML() {
         $response = [
-            /* host */
             'host'              =>      Util::urlType() . Util::serverIp(),
         ];
         $this->assign($response);
@@ -91,9 +91,11 @@ class Login extends Controller {
         $pwd = Request::instance()->param('p');
 
         $ret = $userModel->loginOK($user, $pwd);
-        if(UserModel::RET_OK == $ret) {
+        if(UserModel::RET_OK == $ret['retCode']) {
             $retCode = Login::RET_OK;
             $retInfo = '登陆成功！';
+            Session::set('user.name', isset($ret['user'])?$ret['user']:"");
+            Session::set('user.mail', $user);
         }
         return json_encode(array('retCode' => $retCode, 'retInfo' => $retInfo));
     }

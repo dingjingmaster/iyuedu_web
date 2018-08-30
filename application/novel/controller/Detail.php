@@ -12,9 +12,13 @@ use \think\Controller;
 use app\common\Util;
 use app\common\MainShow;
 use app\novel\model\OnlineInfoModel;
+use think\Session;
 
 class Detail extends Controller {
     public function novel() {
+        $showLog = Session::has('user')?'i_hidden':'i_show';
+        $showLogged = Session::has('user')?'i_show':'i_hidden';
+        $userName = Session::has('user')?Session::get('user.name'):'';
         $novelID = Request::instance()->param('id');
         $curPage = Request::instance()->param('cur');
         $novelModel = new OnlineInfoModel();
@@ -36,7 +40,6 @@ class Detail extends Controller {
         $chapter = array_slice($chapter, $curItem, $this->everyPage);
 
         $response = [
-            /* host */
             'host'              =>      Util::urlType() . Util::serverIp(),
             'id'                =>      $novelInfo['_id'],
             'name'              =>      $novelInfo['name'],
@@ -44,6 +47,9 @@ class Detail extends Controller {
             'category'          =>      $novelInfo['category'],
             'status'            =>      $novelInfo['status'],
             'view'              =>      $novelInfo['viewcount'],
+            'showLogged'        =>      $showLogged,
+            'showLog'           =>      $showLog,
+            'userName'          =>      $userName,
             'update'            =>      Util::timeStr($novelInfo['updateTime']),
             'desc'              =>      $novelInfo['desc'],
             'img'               =>      'data:image/' . $novelInfo['imgType'] . ';base64,' . $novelInfo['imgCotent'],

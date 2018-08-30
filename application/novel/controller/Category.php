@@ -7,7 +7,8 @@
  */
 
 namespace app\novel\controller;
-use  think\Request;
+use think\Request;
+use think\Session;
 use \think\Controller;
 use app\common\Util;
 use app\common\MainShow;
@@ -15,6 +16,9 @@ use app\novel\model\OnlineInfoModel;
 
 class Category extends Controller {
     public function init () {
+        $showLog = Session::has('user')?'i_hidden':'i_show';
+        $showLogged = Session::has('user')?'i_show':'i_hidden';
+        $userName = Session::has('user')?Session::get('user.name'):'';
         $novelModel = new OnlineInfoModel();
         $category = $novelModel->novelCategory();
         $ret = $novelModel->getCategoryNovel($category[0]);
@@ -26,7 +30,11 @@ class Category extends Controller {
             'host'              =>      Util::urlType() . Util::serverIp(),
             'category'          =>      MainShow::novelCategory($category),
             'books'             =>      MainShow::searchShow($ret),
+            'showLogged'        =>      $showLogged,
+            'showLog'           =>      $showLog,
+            'userName'          =>      $userName,
             'pageSplit'         =>      Util::pageSplit($this->baseUrl, $category[0], $curPage, $totalNum, $this->showPage, $this->everyPage),
+
         ];
         $this->assign($response);
         return $this->fetch(ROOT_PATH . '/application/novel/view/category.html');
