@@ -37,8 +37,11 @@ angular.module('register', []).controller('registerCtrl', function($scope, $http
     };
 
     $scope.passwd2_input = function () {
+        $scope.regPasswd2L = "";
         if($scope.regPasswd1 != $scope.regPasswd2) {
             $scope.regPasswd2L = "两次输入密码不一致";
+        } else {
+            $scope.regPasswd2L = "正确";
         }
     };
 
@@ -56,10 +59,31 @@ angular.module('register', []).controller('registerCtrl', function($scope, $http
     $scope.register_ok = function () {
         var pattern = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
         if ("" != $scope.regName && pattern.test($scope.regMail) && ($scope.regPasswd1 == $scope.regPasswd2)) {
-            // 可以提交
+            $http({
+                method: 'POST',
+                url: '/novel/login/regUser/',
+                data:{
+                    "user":$scope.regName,
+                    "mail":$scope.regMail,
+                    "passwd":$scope.regPasswd1
+                }
+            }).then(function (response) {
+                if(200 == response.status) {
+                    var info = response.data;
+                    if(info.retCode == 0) {
+                        alert(info.retInfo);
+                        window.location.href = '/novel/login/loginHTML/';
+                    } else {
+                        alert(info.retInfo + '请您稍后再试! 感谢您的理解！');
+                        window.location.href = '/';
+                    }
+                } else {
+                    alert('抱歉！请求失败，请您稍后再试！');
+                    return false;
+                }
+            });
         } else {
             alert("请您检查并确认，输入的数据是否正确!!!");
         }
     }
-
 });

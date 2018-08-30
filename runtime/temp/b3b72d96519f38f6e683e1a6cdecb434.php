@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:55:"E:\GitHub\iyuedu_web\/application/novel/view/login.html";i:1535288492;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:55:"E:\GitHub\iyuedu_web\/application/novel/view/login.html";i:1535539123;}*/ ?>
 <!doctype html>
 <html>
 <head>
@@ -18,15 +18,15 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({google_ad_client: "ca-pub-8080155533523922", enable_page_level_ads: true});</script>
 </head>
 
-<body style="background-color: #FFFAF0">
+<body ng-app="login" style="background-color: #FFFAF0">
   <!-- 主要内容开始 -->
-  <div class="login_content">
+  <div class="login_content" ng-controller="loginCtrl">
       <h3 style="margin-left: 60px;" align="center">爱阅读登录</h3>
-      <nobr><p>用户名:&nbsp;<input type="text" ng-model="log_name"></p></nobr>
-      <nobr><p>密&nbsp;&nbsp;码:&nbsp;<input type="text" ng-model="log_passwd"></p></nobr>
+      <nobr><p>用户名:&nbsp;<input type="text" ng-model="logName" placeholder="请输入您的邮箱"></p></nobr>
+      <nobr><p>密&nbsp;&nbsp;码:&nbsp;<input type="password" ng-model="logPasswd" placeholder="请输入您的密码">&nbsp;&nbsp;<label style="color: #9932CC;" ng-model="logError">{{logError}}</label></p></nobr>
       <br/>
       <div style="margin-left: 60px;" align="center">
-          <a ng-model="log_submit">登录</a>&nbsp;&nbsp;&nbsp;&nbsp;<a ng-model="log_register">注册</a>
+          <a ng-click="log_register()">注册</a>&nbsp;&nbsp;&nbsp;&nbsp;<a ng-click="log_submit()">登录</a>
       </div>
   </div>
   <div class="i_clear"></div>
