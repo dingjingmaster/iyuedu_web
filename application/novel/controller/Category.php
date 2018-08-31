@@ -41,6 +41,9 @@ class Category extends Controller {
     }
 
     public function category() {
+        $showLog = Session::has('user')?'i_hidden':'i_show';
+        $showLogged = Session::has('user')?'i_show':'i_hidden';
+        $userName = Session::has('user')?Session::get('user.name'):'';
         $model = new OnlineInfoModel();
         $categoryName = Request::instance()->param('c');
         $curPage = Request::instance()->param('cur');
@@ -56,6 +59,9 @@ class Category extends Controller {
             'host'              =>      Util::urlType() . Util::serverIp(),
             'category'          =>      MainShow::novelCategory($category),
             'books'             =>      MainShow::searchShow($ret),
+            'showLogged'        =>      $showLogged,
+            'showLog'           =>      $showLog,
+            'userName'          =>      $userName,
             'pageSplit'         =>      Util::pageSplit($this->baseUrl, $categoryName, $curPage, $totalNum, $this->showPage, $this->everyPage),
         ];
         $this->assign($response);

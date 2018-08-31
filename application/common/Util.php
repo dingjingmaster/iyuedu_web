@@ -21,10 +21,10 @@ class Util {
             //Server settings
             $mail->SMTPDebug = 0;                                   // Enable verbose debug output
             $mail->isSMTP();                                        // Set mailer to use SMTP
-            $mail->Host = 'smtp.sina.com';                          // Specify main and backup SMTP servers
+            $mail->Host = 'smtp.qq.com';                            // Specify main and backup SMTP servers
             $mail->SMTPAuth = true;                                // Enable SMTP authentication
-            $mail->Username = 'enjoyreadtop@sina.com';              // SMTP username
-            $mail->Password = 'dingjing1009.';                      // SMTP password
+            $mail->Username = '1017054408@qq.com';                  // SMTP username
+            $mail->Password = 'ddjj15235009846.';                   // SMTP password
             $mail->SMTPSecure = 'tls';                              // Enable TLS encryption, `ssl` also accepted
             $mail->Port = 587;                                      // TCP port to connect to
             $mail->CharSet = 'utf8';

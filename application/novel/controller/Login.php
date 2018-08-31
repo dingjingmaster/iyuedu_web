@@ -45,23 +45,24 @@ class Login extends Controller {
         $passwd = Request::instance()->param('passwd');
 
         $pm = Util::identifyingCode();
-        $ret = $userModel->register($mail, $user, $passwd, $pm);
-        if (UserModel::RET_OK == $ret) {
-            $url = Util::urlType() . Util::serverIp() . '/novel/login/regResult/u/' . $user . '/e/' . $mail . '/p/' . $pm;
-            $er = Util::sendMail($mail, $user, $url);
+        $url = Util::urlType() . Util::serverIp() . '/novel/login/regResult/u/' . $user . '/e/' . $mail . '/p/' . $pm;
+
+        $ret = Util::sendMail($mail, $user, $url);
+        if (Login::RET_OK == $ret) {
+            $er = $userModel->register($mail, $user, $passwd, $pm);
             if($er) {
-                $retCode = Login::RET_OK;
+                $retCode = UserModel::RET_OK;
                 $retInfo = '注册成功, 请您登陆注册邮箱进行验证!';
+            } else if (UserModel::RET_ERROR_CUNZAI_YJIHUO == $ret) {
+                $retCode = Login::RET_ERROR;
+                $retInfo = '抱歉，该邮箱已存在!若您忘记密码，请找回!';
             } else {
                 $retCode = Login::RET_ERROR;
-                $retInfo = '注册邮件发送失败！';
+                $retInfo = '抱歉, 服务器发生错误';
             }
-        } else if (UserModel::RET_ERROR_CUNZAI_YJIHUO == $ret) {
+        }else {
             $retCode = Login::RET_ERROR;
-            $retInfo = '抱歉，该邮箱已存在!若您忘记密码，请找回!';
-        } else {
-            $retCode = Login::RET_ERROR;
-            $retInfo = '抱歉, 服务器发生错误';
+            $retInfo = '注册邮件发送失败！';
         }
 
         return json_encode(array("retCode"=>$retCode, "retInfo"=>$retInfo));
