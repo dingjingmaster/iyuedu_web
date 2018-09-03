@@ -41,11 +41,42 @@ class OnlineInfoModel extends ModelBase {
                     $tmp['author'] = $ret['author'];
                     $tmp['imgType'] = $ret['imgType'];
                     $tmp['imgCotent'] = $ret['imgCotent'];
-
                     array_push($rankInfo, $tmp);
                 }
             }
         }
         return $rankInfo;
+    }
+
+    public function mainRecommend(){
+        $mainID = array();
+        $mainInfo = array();
+        $ret = $this->queryById($this->csummary, 'detail');
+        if(count($ret) > 0) {
+            foreach ($ret['module'] as $ik=>$iv) {
+                $arr = explode('{]', $iv);
+                $mainID[$ik] = array_slice($arr, 0, 20, true);
+            }
+        } else {
+            // 错误
+        }
+        // 根据 ID 获取信息
+        foreach ($mainID as $id=>$iv) {
+            $module = array();
+            foreach ($iv as $iid) {
+                $ret = $this->queryById($this->cinfo, $iid);
+                if (count($ret) > 0) {
+                    $tmp = array();
+                    $tmp['name'] = $ret['name'];
+                    $tmp['author'] = $ret['author'];
+                    $tmp['imgType'] = $ret['imgType'];
+                    $tmp['imgCotent'] = $ret['imgCotent'];
+                    $tmp['desc'] = $ret['desc'];
+                    array_push($module, $tmp);
+                }
+            }
+            $mainInfo[$id] = $module;
+        }
+        return $mainInfo;
     }
 }

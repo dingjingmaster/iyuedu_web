@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:58:"E:\GitHub\iyuedu_web/application/web\view\index\index.html";i:1535955688;s:58:"E:\GitHub\iyuedu_web\application\web\view\public\base.html";i:1535962942;s:60:"E:\GitHub\iyuedu_web\application\web\view\public\header.html";i:1535954867;s:62:"E:\GitHub\iyuedu_web\application\web\view\public\mainRank.html";i:1535969363;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:58:"E:\GitHub\iyuedu_web/application/web\view\index\index.html";i:1535971775;s:58:"E:\GitHub\iyuedu_web\application\web\view\public\base.html";i:1535962942;s:60:"E:\GitHub\iyuedu_web\application\web\view\public\header.html";i:1535954867;s:62:"E:\GitHub\iyuedu_web\application\web\view\public\mainRank.html";i:1535969363;s:65:"E:\GitHub\iyuedu_web\application\web\view\public\mainContent.html";i:1535972594;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -74,7 +74,44 @@
         </ul>
     </div>
 </div>
-    
+    <div class="i_contain_right">
+    <div class="i_rec_1">
+        <h3 class="i_rec1_title">重磅推荐</h3>
+        <div class="i_rec1_content">
+            <ul class="i_rec1_list">
+                <?php if(is_array($zbtj) || $zbtj instanceof \think\Collection || $zbtj instanceof \think\Paginator): $i = 0; $__LIST__ = $zbtj;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$novel): $mod = ($i % 2 );++$i;?>
+                <li class="i_rec1_item">
+                    <a href="#"><img style="width:150px;height:200px" src="data:image/<?php echo $novel['imgType']; ?>;base64,<?php echo $novel['imgCotent']; ?>" title="<?php echo $novel['name']; ?>"/></a>
+                    <div class="i_rec_info">
+                        <a href="#">
+                            <h3 class="i_rec_name"><?php echo $novel['name']; ?></h3>
+                        </a>
+                        <small class="i_rec_author"><?php echo $novel['author']; ?></small>
+                        <small class="i_rec_desc"><?php echo $novel['desc']; ?></small>
+                    </div>
+                </li>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
+            </ul>
+        </div>
+    </div>
+
+    <div class="i_rec_2">
+        <h3 class="i_rec2_title">青春文学</h3>
+        <ul class="i_rec2_list">
+            <?php if(is_array($qcwx) || $qcwx instanceof \think\Collection || $qcwx instanceof \think\Paginator): $i = 0; $__LIST__ = $qcwx;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$novel): $mod = ($i % 2 );++$i;?>
+                <li class="i_rec2_item">
+                    <a href="#" onclick="">
+                        <img style="width:120px;height:160px" src="data:image/<?php echo $novel['imgType']; ?>;base64,<?php echo $novel['imgCotent']; ?>" title="<?php echo $novel['name']; ?>"/>
+                    </a>
+                    <a href="#">
+                        <h5 class="i_rec2_name"><?php echo $novel['name']; ?></h5>
+                    </a>
+                    <small  class="i_rec2_author"><?php echo $novel['author']; ?></small >
+                </li>
+            <?php endforeach; endif; else: echo "" ;endif; ?>
+        </ul>
+    </div>
+</div>
     </div>
     
     

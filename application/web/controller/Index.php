@@ -22,13 +22,13 @@ class Index extends ControllerBase {
         $view->showLogged = Session::has('user')?'i_show':'i_hidden';                       /* 登陆展示 */
         $view->userName = Session::has('user')?Session::get('user.name'):' ';       /*  用户名展示 */
 
-        $rankList = $onlineInfo->mainRank('rank_rq');
-        $view->rankList = $rankList;
+        /* 左侧排行榜 */
+        $view->rankList = $onlineInfo->mainRank('rank_rq');
 
         /* 右侧主页数据 */
-
-
-
+        $mainList = $onlineInfo->mainRecommend();
+        $view->zbtj = $mainList['module_zbtj'];
+        $view->qcwx = $mainList['module_qcwx'];
 
         // 错误捕获处理
         $ret = $view->fetch('web@index/index');
