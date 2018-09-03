@@ -52,10 +52,10 @@ class Search extends Controller {
             'userName'          =>      $userName,
         ];
         $this->assign($response);
-        return $this->fetch(ROOT_PATH . '/application/novel/view/search.html');
+        return $this->fetch(ROOT_PATH . '/application/web/view/search.html');
     }
 
-    private $baseUrl = '/novel/search/book/query/';
+    private $baseUrl = '/web/search/book/query/';
     private $everyPage = 20;            // 每页展示条数
     private $showPage = 5;              // 显示页数
 

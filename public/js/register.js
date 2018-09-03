@@ -69,7 +69,7 @@ angular.module('register', []).controller('registerCtrl', function($scope, $http
         if ("" != $scope.regName && pattern.test($scope.regMail) && ($scope.regPasswd1 == $scope.regPasswd2)) {
             $http({
                 method: 'POST',
-                url: '/novel/login/regUser/',
+                url: '/web/login/regUser/',
                 data:{
                     "user":$scope.regName,
                     "mail":$scope.regMail,
@@ -80,7 +80,7 @@ angular.module('register', []).controller('registerCtrl', function($scope, $http
                     var info = response.data;
                     if(info.retCode == 0) {
                         alert(info.retInfo);
-                        window.location.href = '/novel/login/loginHTML/';
+                        window.location.href = '/web/login/loginHTML/';
                     } else {
                         alert(info.retInfo + '请您稍后再试! 感谢您的理解！');
                         window.location.href = '/';

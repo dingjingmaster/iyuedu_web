@@ -23,7 +23,7 @@ class Login extends Controller {
         ];
 
         $this->assign($response);
-        return $this->fetch(ROOT_PATH . '/application/novel/view/login.html');
+        return $this->fetch(ROOT_PATH . '/application/web/view/login.html');
     }
 
     public function registerHTML() {
@@ -31,7 +31,7 @@ class Login extends Controller {
             'host'              =>      Util::urlType() . Util::serverIp(),
         ];
         $this->assign($response);
-        return $this->fetch(ROOT_PATH . '/application/novel/view/register.html');
+        return $this->fetch(ROOT_PATH . '/application/web/view/register.html');
     }
 
     /* 邮箱验证 -- 发送短信 */

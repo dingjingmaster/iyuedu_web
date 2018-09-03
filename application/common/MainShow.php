@@ -22,8 +22,8 @@ class MainShow {
                     if (count($value) <= 0) {
                         continue;
                     }
-                    $html .= '<li class="i_rec1_item"><a href="/novel/detail/novel/id/' . $id . '"><img width="150px" height="200px" src="data:image/' . $value['imgType'] . ';base64,' . $value['imgCotent'] .  '"/></a>';
-                    $html .= '<div class="i_rec_info"><a href="/novel/detail/novel/id/' . $id . '"><h3 class="i_rec_name">' . $value['name'] . '</h3></a>';
+                    $html .= '<li class="i_rec1_item"><a href="/web/detail/web/id/' . $id . '"><img width="150px" height="200px" src="data:image/' . $value['imgType'] . ';base64,' . $value['imgCotent'] .  '"/></a>';
+                    $html .= '<div class="i_rec_info"><a href="/web/detail/web/id/' . $id . '"><h3 class="i_rec_name">' . $value['name'] . '</h3></a>';
                     $html .= '<small class="i_rec_author">' . $value['author'] . '</small>';
                     $html .= '<small class="i_rec_desc">' .$value['desc'] . '</small>';
                     $html .= '</div></li>';
@@ -36,8 +36,8 @@ class MainShow {
                     if(count($value) <= 0) {
                         continue;
                     }
-                    $html .= '<li class="i_rec2_item"><a href="/novel/detail/novel/id/' . $id . '"><img width="120px" height="160px" src="data:image/' . $value['imgType'] . ';base64,' . $value['imgCotent'] . '"/></a>';
-                    $html .= '<a href="/novel/detail/novel/id/' . $id . '">' . '<h5 class="i_rec2_name">' . $value['name'] . '</h5></a>';
+                    $html .= '<li class="i_rec2_item"><a href="/web/detail/web/id/' . $id . '"><img width="120px" height="160px" src="data:image/' . $value['imgType'] . ';base64,' . $value['imgCotent'] . '"/></a>';
+                    $html .= '<a href="/web/detail/web/id/' . $id . '">' . '<h5 class="i_rec2_name">' . $value['name'] . '</h5></a>';
                     $html .= '<small class="i_rec2_author">' . $value['author'] . '</small></li>';
                 }
                 $html .= '</ul></div>';
@@ -67,7 +67,7 @@ class MainShow {
                 $infoTmp['num'] = ++ $num;
                 $infoTmp['name'] = $value['name'];
                 $infoTmp['author'] = $value['author'];
-                $infoTmp['url'] = '/novel/detail/novel/id/' . $id;
+                $infoTmp['url'] = '/web/detail/web/id/' . $id;
                 $infoTmp['imgSrc'] = 'data:image/' . $value['imgType'] . ';base64,' . $value['imgCotent'];
                 $infoTmp['show'] = $sample;
 
@@ -160,18 +160,18 @@ class MainShow {
         $str .= '<hr/><div align="center">';
         if('' != $content['beforeKey']) {
             $arr = explode('{]', $content['beforeKey']);
-            $str .= '<a href="/novel/content/content/id/' . $id . '/c1/' . $arr[1] . '/c2/' . $arr[0] . '/">上一章</a>';
+            $str .= '<a href="/web/content/content/id/' . $id . '/c1/' . $arr[1] . '/c2/' . $arr[0] . '/">上一章</a>';
         } else {
             $str .= '<a href="#">上一章</a>';
         }
         // 首页
         $str .= '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/">首页</a>';
         // 目录页
-        $str .= '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://enjoyread.top/novel/detail/novel/id/' . $id . '">目录页</a>';
+        $str .= '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://enjoyread.top/web/detail/web/id/' . $id . '">目录页</a>';
 
         if('' != $content['afterKey']) {
             $arr = explode('{]', $content['afterKey']);
-            $str .= '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/novel/content/content/id/' . $id . '/c1/' . $arr[1] . '/c2/' . $arr[0] . '/">下一章</a>';
+            $str .= '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/web/content/content/id/' . $id . '/c1/' . $arr[1] . '/c2/' . $arr[0] . '/">下一章</a>';
         } else {
             $str .= '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">下一章</a>';
         }
@@ -185,8 +185,8 @@ class MainShow {
         $html .= '<tr><th align="left">封面</th><th align="left">书名</th><th align="left">作者名</th><th align="left">类别</th><th align="left">状态</th><th align="left">阅读量</th><th align="left">最后更新</th></tr><br/>';
         foreach ($novel as $n) {
             $html .= '<tr>';
-            $html .= '<td>' . '<a href="/novel/detail/novel/id/' . $n['_id'] . '"><img width="80px" height="96px" src="data:image/' . $n["imgType"] . ';base64,' . $n['imgCotent'] . '"/></a></td>';
-            $html .= '<td>' . '<a href="/novel/detail/novel/id/' . $n['_id'] . '"><p>' . $n['name'] . '</p></a></td>';
+            $html .= '<td>' . '<a href="/web/detail/web/id/' . $n['_id'] . '"><img width="80px" height="96px" src="data:image/' . $n["imgType"] . ';base64,' . $n['imgCotent'] . '"/></a></td>';
+            $html .= '<td>' . '<a href="/web/detail/web/id/' . $n['_id'] . '"><p>' . $n['name'] . '</p></a></td>';
             $html .= '<td>' . '<p>' . $n['author'] . '</p></td>';
             $html .= '<td>' . '<p>' . $n['category'] . '</p></td>';
             $html .= '<td>' . '<p>' . $n['status'] . '</p></td>';
@@ -206,9 +206,9 @@ class MainShow {
         for($i = 0; $i < count($category); ++$i) {
             $html .= '<tr>';
             if($flag) {
-                $html .= '<th><a href="/novel/category/category/c/' . $category[$i] . '">' . $category[$i] . '</a></th>';
+                $html .= '<th><a href="/web/category/category/c/' . $category[$i] . '">' . $category[$i] . '</a></th>';
                 if($i + 1 < count($category)) {
-                    $html .= '<th><a href="/novel/category/category/c/' . $category[$i + 1] . '">' . $category[$i + 1] . '</a></th>';
+                    $html .= '<th><a href="/web/category/category/c/' . $category[$i + 1] . '">' . $category[$i + 1] . '</a></th>';
                 } else {
                     $html .= '<th></th>';
                 }

@@ -1,6 +1,6 @@
 angular.module('login', []).controller('loginCtrl', function($scope, $http) {
     $scope.log_register = function () {
-        window.location.href = '/novel/login/registerHTML/';
+        window.location.href = '/web/login/registerHTML/';
     };
     
     $scope.log_submit = function () {
@@ -9,7 +9,7 @@ angular.module('login', []).controller('loginCtrl', function($scope, $http) {
         if ("" != $scope.logPasswd && pattern.test($scope.logName)) {
             $http({
                 method: 'POST',
-                url: '/novel/login/canLogin/',
+                url: '/web/login/canLogin/',
                 data:{
                     "u": $scope.logName,
                     "p": $scope.logPasswd

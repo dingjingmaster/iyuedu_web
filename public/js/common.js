@@ -12,9 +12,9 @@ var app = angular.module('app', []).controller('appCtrl', function($scope, $http
     /* 主页初始化请求 */
     $scope.mainInit = function () {
         /* 初始化排行榜 */
-        this.getRank('/novel/main_page/rank/n/rq/');
+        this.getRank('/web/main_page/rank/n/rq/');
         /* 初始化主页模块 */
-        $http({method: 'GET', url: '/novel/main_page/module/n/main/'}).then(function (response) {
+        $http({method: 'GET', url: '/web/main_page/module/n/main/'}).then(function (response) {
             var js = response.data;
             var html = js.module_zbtj;
             for(var key in js) {
@@ -45,7 +45,7 @@ var app = angular.module('app', []).controller('appCtrl', function($scope, $http
         if (undefined === query || null == query || "" === query) {
             return;
         }
-        window.location.href="javascript:location.href='" + host + "/novel/search/book/query/" + query + "'";
+        window.location.href="javascript:location.href='" + host + "/web/search/book/query/" + query + "'";
     }
 });
 

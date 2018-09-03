@@ -18,7 +18,7 @@ return [
 //        ':name' => ['index/hello', ['method' => 'post']],
 //    ],
 //    'pagem' => [
-//        'pagem'     =>      '[index.php/novel/contrller/]'
+//        'pagem'     =>      '[index.php/web/contrller/]'
 //    ],
 
 ];

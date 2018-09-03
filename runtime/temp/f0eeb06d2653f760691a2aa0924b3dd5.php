@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:56:"E:\GitHub\iyuedu_web\/application/novel/view/detail.html";i:1535618376;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:56:"E:\GitHub\iyuedu_web\/application/web/view/detail.html";i:1535618376;}*/ ?>
 <!doctype html>
 <html ng-app="app" ng-controller="appCtrl" >
 <head>

@@ -57,10 +57,10 @@ class Detail extends Controller {
             'pageSplit'         =>      Util::pageSplit($this->baseUrl, $novelID, $curPage, $totalNum, $this->showPage, $this->everyPage),
         ];
         $this->assign($response);
-        return $this->fetch(ROOT_PATH . '/application/novel/view/detail.html');
+        return $this->fetch(ROOT_PATH . '/application/web/view/detail.html');
     }
     /* 参数设置 */
-    private $baseUrl = '/novel/detail/novel/id';
+    private $baseUrl = '/web/detail/web/id';
     private $everyPage = 20;            // 每页展示条数
     private $showPage = 5;              // 显示页数
 }

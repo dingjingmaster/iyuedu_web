@@ -37,7 +37,7 @@ class Category extends Controller {
 
         ];
         $this->assign($response);
-        return $this->fetch(ROOT_PATH . '/application/novel/view/category.html');
+        return $this->fetch(ROOT_PATH . '/application/web/view/category.html');
     }
 
     public function category() {
@@ -65,11 +65,11 @@ class Category extends Controller {
             'pageSplit'         =>      Util::pageSplit($this->baseUrl, $categoryName, $curPage, $totalNum, $this->showPage, $this->everyPage),
         ];
         $this->assign($response);
-        return $this->fetch(ROOT_PATH . '/application/novel/view/category.html');
+        return $this->fetch(ROOT_PATH . '/application/web/view/category.html');
     }
 
     /* 参数设置 */
-    private $baseUrl = '/novel/category/category/c';
+    private $baseUrl = '/web/category/category/c';
     private $everyPage = 12;            // 每页展示条数
     private $showPage = 5;              // 显示页数
 }

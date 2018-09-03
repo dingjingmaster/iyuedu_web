@@ -20,7 +20,7 @@ class MainPage extends Controller {
             'userName'          =>      $userName,
         ];
         $this->assign($response);
-        return $this->fetch(ROOT_PATH . '/application/novel/view/index.html');
+        return $this->fetch(ROOT_PATH . '/application/web/view/index.html');
     }
 
     /* 主页模块 返回数据 */

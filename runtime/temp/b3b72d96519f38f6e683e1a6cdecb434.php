@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:55:"E:\GitHub\iyuedu_web\/application/novel/view/login.html";i:1535702535;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:55:"E:\GitHub\iyuedu_web\/application/web/view/login.html";i:1535702535;}*/ ?>
 <!doctype html>
 <html>
 <head>

@@ -28,6 +28,6 @@ class Content extends Controller {
             'content'           =>      $content,
         ];
         $this->assign($response);
-        return $this->fetch(ROOT_PATH . '/application/novel/view/content.html');
+        return $this->fetch(ROOT_PATH . '/application/web/view/content.html');
     }
 }
