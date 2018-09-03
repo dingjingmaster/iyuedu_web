@@ -481,8 +481,8 @@ class Cx extends Taglib
     }
 
     /**
-     * load 标签解析 {load file="/static/js/base.js" /}
-     * 格式：{load file="/static/css/base.css" /}
+     * load 标签解析 {load file="/static/js/public.js" /}
+     * 格式：{load file="/static/css/public.css" /}
      * @access public
      * @param array $tag 标签属性
      * @param string $content 标签内容

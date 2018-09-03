@@ -1,15 +1,5 @@
-/* common style */
-/* i --- index页面
- * 
- */
 /* 初始化 */
-html, body, a, p, img, span, div, ul, li{
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
-  font-family: 楷体, "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-decoration: none;
-  list-style: none outside none;
-}
+html, body, a, p, img, span, div, ul, li{margin: 0 0 0 0;padding: 0 0 0 0;font-family: 楷体, "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;text-decoration: none;list-style: none outside none;}
 a{color: dimgrey; cursor: pointer;}
 a:hover{color: #AB82FF;}
 small{font-size: 18px;}
@@ -50,9 +40,9 @@ li.page_turn {text-align: center;float: left;margin: 6px;}
 .cur {margin: 0;padding: 0;color: #9400D3;background-color: #FAFAFA;border-bottom: 3px solid 	#9400D3;}
 .i_rank_list {width: 256px;display: inline-block;}
 .i_list_item {padding: 0;margin: 20px 0 20px 0;}
-.i_sample {width: 100%;line-height: 20px;padding-left: 10px;cursor: pointer;display: inline-block;}
-.i_num {width: 20px;font-size: 14px;color: #9400D3;float: left;display: inline-block;}
-.i_name {line-height: 20px;padding-left: 6px;display: inline-block;}
+.i_sample {width: 100%;line-height: 20px;padding-left: 10px;cursor: pointer;}
+.i_num {width: 20px;font-size: 14px;color: #9400D3;float: left;}
+.i_name {line-height: 20px;padding-left: 6px;}
 .i_author {line-height: 20px;height: 20px;padding-left: 22px;color: #999;}
 .i_clear {clear: both;font-size: 0;line-height: 0;height: 0;}
 .i_detail {width: 250px;padding: 0;color: #4dad4d;cursor: pointer;float: right;font-size: 18px;}

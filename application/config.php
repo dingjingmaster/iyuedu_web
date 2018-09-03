@@ -58,7 +58,7 @@ return [
     // 禁止访问模块
     'deny_module_list'       => ['common', 'extra'],
     // 默认控制器名
-    'default_controller'     => 'main_Page',
+    'default_controller'     => 'index',
     // 默认操作名
     'default_action'         => 'index',
     // 默认验证器
@@ -149,7 +149,7 @@ return [
     // +----------------------------------------------------------------------
 
     // 异常页面的模板文件
-    'exception_tmpl'         => APP_PATH . 'web/view' . DS . '404.html',
+    //'exception_tmpl'         => APP_PATH . 'web/view' . DS . '404.html',
 
     // 错误显示信息,非调试模式有效
     'error_message'          => '页面错误！请稍后再试～',

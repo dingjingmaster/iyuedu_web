@@ -25,7 +25,7 @@ class Html
 {
     protected $config = [
         'trace_file' => '',
-        'trace_tabs' => ['base' => '基本', 'file' => '文件', 'info' => '流程', 'notice|error' => '错误', 'sql' => 'SQL', 'debug|log' => '调试'],
+        'trace_tabs' => ['public' => '基本', 'file' => '文件', 'info' => '流程', 'notice|error' => '错误', 'sql' => 'SQL', 'debug|log' => '调试'],
     ];
 
     // 实例化并传入参数
@@ -82,7 +82,7 @@ class Html
         foreach ($this->config['trace_tabs'] as $name => $title) {
             $name = strtolower($name);
             switch ($name) {
-                case 'base': // 基本信息
+                case 'public': // 基本信息
                     $trace[$title] = $base;
                     break;
                 case 'file': // 文件信息

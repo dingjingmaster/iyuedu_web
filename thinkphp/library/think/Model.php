@@ -275,8 +275,8 @@ abstract class Model implements \JsonSerializable, \ArrayAccess
         $query = $this->getQuery($buildNewQuery);
 
         // 全局作用域
-        if ($useBaseQuery && method_exists($this, 'base')) {
-            call_user_func_array([$this, 'base'], [ & $query]);
+        if ($useBaseQuery && method_exists($this, 'public')) {
+            call_user_func_array([$this, 'public'], [ & $query]);
         }
 
         // 返回当前模型的数据库查询对象

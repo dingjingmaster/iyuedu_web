@@ -1,0 +1,41 @@
+<div class="i_contain_left">
+    <div class="i_contain_rank">
+        <ul class="i_rank_chose">
+            <li class="i_rank_chose_item cur">人气榜</li>
+            <li class="i_rank_chose_item">完结榜</li>
+        </ul>
+        <ul class="i_rank_list">
+            {volist name="rankList" id="novel"}
+            {if condition="($novel.num == 1)"}
+                <li class="i_list_item">
+                    <div class="i_sample i_hidden">
+                        <span class="i_num">{$novel.num}</span>
+                        <h4 class="i_name">{$novel.name}</h4>
+                        <p class="i_author">{$novel.author}</p>
+                    </div>
+                    <div class="i_detail i_show">
+                        <span class="i_num">{$novel.num}</span>
+                        <a><img style="width: 100px; height:133px;" src="data:image/{$novel.imgType};base64,{$novel.imgCotent}" title="{$novel.name}"/></a>
+                        <div class="detail"><p class="i_detail_name">{$novel.name}</p><p class="i_detail_author">{$novel.author}</p></div>
+                    </div>
+                    <div class="i_clear"></div>
+                </li>
+            {else/}
+                <li class="i_list_item">
+                    <div class="i_sample i_show">
+                        <span class="i_num">{$novel.num}</span>
+                        <h4 class="i_name">{$novel.name}</h4>
+                        <p class="i_author">{$novel.author}</p>
+                    </div>
+                    <div class="i_detail i_hidden">
+                        <span class="i_num">{$novel.num}</span>
+                        <a><img style="width: 100px; height:133px;" src="data:image/{$novel.imgType};base64,{$novel.imgCotent}" title="{$novel.name}"/></a>
+                        <div class="detail"><p class="i_detail_name">{$novel.name}</p><p class="i_detail_author">{$novel.author}</p></div>
+                    </div>
+                    <div class="i_clear"></div>
+                </li>
+            {/if}
+            {/volist}
+        </ul>
+    </div>
+</div>

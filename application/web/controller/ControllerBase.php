@@ -8,8 +8,19 @@
 
 namespace app\web\controller;
 
+use think\Controller;
+use think\Request;
 
-class ControllerBase
-{
+class ControllerBase extends Controller {
+    public function __construct(Request $request = null)
+    {
+        parent::__construct($request);
+    }
 
+
+
+    public function __destruct()
+    {
+        // TODO: Implement __destruct() method.
+    }
 }
