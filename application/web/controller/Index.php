@@ -20,7 +20,7 @@ class Index extends ControllerBase {
         $view->host = Utils::urlType() . Utils::serverIp();                                         /* url */
         $view->showLog = Session::has('user')?'i_hidden':'i_show';                          /* 未登录展示 */
         $view->showLogged = Session::has('user')?'i_show':'i_hidden';                       /* 登陆展示 */
-        $view->userName = Session::has('user')?Session::get('user.name'):' ';       /*  用户名展示 */
+        $view->userName = Session::has('user')?Session::get('user.name'):'';        /*  用户名展示 */
 
         /* 左侧排行榜 */
         $view->rankList = $onlineInfo->mainRank('rank_rq');
@@ -29,6 +29,9 @@ class Index extends ControllerBase {
         $mainList = $onlineInfo->mainRecommend();
         $view->zbtj = $mainList['module_zbtj'];
         $view->qcwx = $mainList['module_qcwx'];
+        $view->jdwx = $mainList['module_jdwx'];
+        $view->lzwx = $mainList['module_lzwx'];
+        $view->yqxs = $mainList['module_yqxs'];
 
         // 错误捕获处理
         $ret = $view->fetch('web@index/index');
@@ -36,12 +39,9 @@ class Index extends ControllerBase {
         return $ret;
     }
 
-
-
-
+    /* 首页 排行榜请求 */
     public function mrank() {
         $onlineInfo = new OnlineInfoModel();
-
         /* 左侧排行榜数据 */
         $rankName = '';
         $rankName = Request::instance()->param('irank');
@@ -51,9 +51,10 @@ class Index extends ControllerBase {
             // 默认人气榜
             $rankName = 'rank_' . 'rq';
         }
-
         $rankList = $onlineInfo->mainRank($rankName);
 
-        return $rankList;
+        return json_encode($rankList);
     }
+
+    /*  */
 }

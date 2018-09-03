@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:58:"E:\GitHub\iyuedu_web/application/web\view\index\index.html";i:1535971775;s:58:"E:\GitHub\iyuedu_web\application\web\view\public\base.html";i:1535962942;s:60:"E:\GitHub\iyuedu_web\application\web\view\public\header.html";i:1535954867;s:62:"E:\GitHub\iyuedu_web\application\web\view\public\mainRank.html";i:1535969363;s:65:"E:\GitHub\iyuedu_web\application\web\view\public\mainContent.html";i:1535972594;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:58:"E:\GitHub\iyuedu_web/application/web\view\index\index.html";i:1535971775;s:58:"E:\GitHub\iyuedu_web\application\web\view\public\base.html";i:1535962942;s:60:"E:\GitHub\iyuedu_web\application\web\view\public\header.html";i:1535954867;s:62:"E:\GitHub\iyuedu_web\application\web\view\public\mainRank.html";i:1535982539;s:65:"E:\GitHub\iyuedu_web\application\web\view\public\mainContent.html";i:1535979288;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,10 +38,10 @@
     <div class="i_contain_left">
     <div class="i_contain_rank">
         <ul class="i_rank_chose">
-            <li class="i_rank_chose_item cur">人气榜</li>
-            <li class="i_rank_chose_item">完结榜</li>
+            <li class="i_rank_chose_item cur" onclick="rank_request('rq')">人气榜</li>
+            <li class="i_rank_chose_item" onclick="rank_request('wj')">完结榜</li>
         </ul>
-        <ul class="i_rank_list">
+        <ul id="i_rank_list" class="i_rank_list">
             <?php if(is_array($rankList) || $rankList instanceof \think\Collection || $rankList instanceof \think\Paginator): $i = 0; $__LIST__ = $rankList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$novel): $mod = ($i % 2 );++$i;if(($novel['num'] == 1)): ?>
                 <li class="i_list_item">
                     <div class="i_sample i_hidden">
@@ -111,6 +111,58 @@
             <?php endforeach; endif; else: echo "" ;endif; ?>
         </ul>
     </div>
+
+    <div class="i_rec_2">
+        <h3 class="i_rec2_title">经典文学</h3>
+        <ul class="i_rec2_list">
+            <?php if(is_array($jdwx) || $jdwx instanceof \think\Collection || $jdwx instanceof \think\Paginator): $i = 0; $__LIST__ = $jdwx;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$novel): $mod = ($i % 2 );++$i;?>
+            <li class="i_rec2_item">
+                <a href="#" onclick="">
+                    <img style="width:120px;height:160px" src="data:image/<?php echo $novel['imgType']; ?>;base64,<?php echo $novel['imgCotent']; ?>" title="<?php echo $novel['name']; ?>"/>
+                </a>
+                <a href="#">
+                    <h5 class="i_rec2_name"><?php echo $novel['name']; ?></h5>
+                </a>
+                <small  class="i_rec2_author"><?php echo $novel['author']; ?></small >
+            </li>
+            <?php endforeach; endif; else: echo "" ;endif; ?>
+        </ul>
+    </div>
+
+    <div class="i_rec_2">
+        <h3 class="i_rec2_title">励志文学</h3>
+        <ul class="i_rec2_list">
+            <?php if(is_array($lzwx) || $lzwx instanceof \think\Collection || $lzwx instanceof \think\Paginator): $i = 0; $__LIST__ = $lzwx;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$novel): $mod = ($i % 2 );++$i;?>
+            <li class="i_rec2_item">
+                <a href="#" onclick="">
+                    <img style="width:120px;height:160px" src="data:image/<?php echo $novel['imgType']; ?>;base64,<?php echo $novel['imgCotent']; ?>" title="<?php echo $novel['name']; ?>"/>
+                </a>
+                <a href="#">
+                    <h5 class="i_rec2_name"><?php echo $novel['name']; ?></h5>
+                </a>
+                <small  class="i_rec2_author"><?php echo $novel['author']; ?></small >
+            </li>
+            <?php endforeach; endif; else: echo "" ;endif; ?>
+        </ul>
+    </div>
+
+    <div class="i_rec_2">
+        <h3 class="i_rec2_title">言情小说</h3>
+        <ul class="i_rec2_list">
+            <?php if(is_array($yqxs) || $yqxs instanceof \think\Collection || $yqxs instanceof \think\Paginator): $i = 0; $__LIST__ = $yqxs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$novel): $mod = ($i % 2 );++$i;?>
+            <li class="i_rec2_item">
+                <a href="#" onclick="">
+                    <img style="width:120px;height:160px" src="data:image/<?php echo $novel['imgType']; ?>;base64,<?php echo $novel['imgCotent']; ?>" title="<?php echo $novel['name']; ?>"/>
+                </a>
+                <a href="#">
+                    <h5 class="i_rec2_name"><?php echo $novel['name']; ?></h5>
+                </a>
+                <small  class="i_rec2_author"><?php echo $novel['author']; ?></small >
+            </li>
+            <?php endforeach; endif; else: echo "" ;endif; ?>
+        </ul>
+    </div>
+
 </div>
     </div>
     

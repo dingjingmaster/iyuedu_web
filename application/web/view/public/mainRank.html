@@ -1,10 +1,10 @@
 <div class="i_contain_left">
     <div class="i_contain_rank">
         <ul class="i_rank_chose">
-            <li class="i_rank_chose_item cur">人气榜</li>
-            <li class="i_rank_chose_item">完结榜</li>
+            <li class="i_rank_chose_item cur" onclick="rank_request('rq')">人气榜</li>
+            <li class="i_rank_chose_item" onclick="rank_request('wj')">完结榜</li>
         </ul>
-        <ul class="i_rank_list">
+        <ul id="i_rank_list" class="i_rank_list">
             {volist name="rankList" id="novel"}
             {if condition="($novel.num == 1)"}
                 <li class="i_list_item">

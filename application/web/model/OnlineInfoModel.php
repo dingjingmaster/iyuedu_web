@@ -75,7 +75,7 @@ class OnlineInfoModel extends ModelBase {
                     array_push($module, $tmp);
                 }
             }
-            $mainInfo[$id] = $module;
+            $mainInfo[$id] = array_slice($module, 0, 10, true);
         }
         return $mainInfo;
     }
