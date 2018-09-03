@@ -5,7 +5,7 @@ angular.module('login', []).controller('loginCtrl', function($scope, $http) {
     
     $scope.log_submit = function () {
         $scope.logError = '';
-        var pattern = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+        var pattern = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
         if ("" != $scope.logPasswd && pattern.test($scope.logName)) {
             $http({
                 method: 'POST',

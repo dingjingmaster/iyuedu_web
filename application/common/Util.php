@@ -12,7 +12,30 @@ use PHPMailer\Exception;
 class Util {
 
     public static function identifyingCode() {
-        return time();
+        $buf = '';
+        for($i = 0; $i <= 6; ++$i) {
+            $buf .= mt_rand(1, 9);
+        }
+        return $buf;
+    }
+
+    public static function sendMessage($to, $userName, $content) {
+        $flag = false;
+        $curl = curl_init();
+        $sendData = Util::data . '&mobile=' . $to .
+            '&content='.rawurlencode('[爱阅读]' . '您好' . $userName . ',您的验证码为:'.$content.',该验证码24小时内有效');
+        curl_setopt($curl, CURLOPT_URL, Util::url);
+        curl_setopt($curl, CURLOPT_HEADER, false);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($curl, CURLOPT_NOBODY, true);
+        curl_setopt($curl, CURLOPT_POST, true);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $sendData);
+        $return_str = curl_exec($curl);
+        curl_close($curl);
+        if(100 == $return_str) {
+            $flag = true;
+        }
+        return $flag;
     }
 
     public static function sendMail($to, $userName, $content){
@@ -117,6 +140,9 @@ class Util {
         $html .= '</ul>';
         return $html;
     }
+
+    const url = 'http://sms.106jiekou.com/utf8/sms.aspx';
+    const data = 'account=enjoyread&password=dingjing1009.';
 
 }
 

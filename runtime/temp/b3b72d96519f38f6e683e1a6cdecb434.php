@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:55:"E:\GitHub\iyuedu_web\/application/novel/view/login.html";i:1535609086;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:55:"E:\GitHub\iyuedu_web\/application/novel/view/login.html";i:1535702535;}*/ ?>
 <!doctype html>
 <html>
 <head>
@@ -19,7 +19,7 @@
   <!-- 主要内容开始 -->
   <div class="login_content" ng-controller="loginCtrl">
       <h3 style="margin-left: 60px;" align="center">爱阅读登录</h3>
-      <nobr><p>用户名:&nbsp;<input type="text" ng-model="logName" placeholder="请输入您的邮箱"></p></nobr>
+      <nobr><p>用户名:&nbsp;<input type="text" ng-model="logName" placeholder="请输入您的注册手机号码"></p></nobr>
       <nobr><p>密&nbsp;&nbsp;码:&nbsp;<input type="password" ng-model="logPasswd" placeholder="请输入您的密码">&nbsp;&nbsp;<label style="color: #9932CC;" ng-model="logError">{{logError}}</label></p></nobr>
       <br/>
       <div style="margin-left: 60px;" align="center">

@@ -18,7 +18,6 @@ class Login extends Controller {
     const RET_OK    = 0;
     const RET_ERROR =   -1;
     public function loginHTML () {
-
         $response = [
             'host'              =>      Util::urlType() . Util::serverIp(),
         ];
@@ -35,7 +34,7 @@ class Login extends Controller {
         return $this->fetch(ROOT_PATH . '/application/novel/view/register.html');
     }
 
-    /* 邮箱验证 -- 发送邮件 */
+    /* 邮箱验证 -- 发送短信 */
     public function regUser() {
         $retCode = Login::RET_ERROR;
         $retInfo = '';
@@ -44,44 +43,35 @@ class Login extends Controller {
         $mail = Request::instance()->param('mail');
         $passwd = Request::instance()->param('passwd');
 
-        $pm = Util::identifyingCode();
-        $url = Util::urlType() . Util::serverIp() . '/novel/login/regResult/u/' . $user . '/e/' . $mail . '/p/' . $pm;
-
-        $ret = Util::sendMail($mail, $user, $url);
-        if (Login::RET_OK == $ret) {
-            $er = $userModel->register($mail, $user, $passwd, $pm);
-            if($er) {
-                $retCode = UserModel::RET_OK;
-                $retInfo = '注册成功, 请您登陆注册邮箱进行验证!';
-            } else if (UserModel::RET_ERROR_CUNZAI_YJIHUO == $ret) {
-                $retCode = Login::RET_ERROR;
-                $retInfo = '抱歉，该邮箱已存在!若您忘记密码，请找回!';
-            } else {
-                $retCode = Login::RET_ERROR;
-                $retInfo = '抱歉, 服务器发生错误';
-            }
-        }else {
+        $ret = $userModel->register($mail, $user, $passwd);
+        if(UserModel::RET_OK == $ret) {
+            $retCode = UserModel::RET_OK;
+            $retInfo = '注册成功!';
+        } else if (UserModel::RET_ERROR_CUNZAI_YJIHUO == $ret) {
             $retCode = Login::RET_ERROR;
-            $retInfo = '注册邮件发送失败！';
+            $retInfo = '抱歉，该邮箱已存在!若您忘记密码，请找回!';
+        } else {
+            $retCode = Login::RET_ERROR;
+            $retInfo = '抱歉, 服务器发生错误';
         }
 
         return json_encode(array("retCode"=>$retCode, "retInfo"=>$retInfo));
     }
 
-    /* 邮箱验证 -- 结果 */
-    public function regResult() {
-        $retInfo = '激活失败，请您检查是否已过激活时间！请重新注册！';
-        $userModel = new UserModel();
-        $user = Request::instance()->param('u');
-        $mail = Request::instance()->param('e');
-        $pm = Request::instance()->param('p');
-
-        $ret = $userModel->registerOK($mail, $user, $pm);
-        if(UserModel::RET_OK == $ret) {
-            $retInfo = '激活成功！感谢您的配合！祝您阅读愉快！&nbsp;&nbsp;<a href="' . Util::urlType() . Util::serverIp() . '">开始免费阅读</a>';
-        }
-        return $retInfo;
-    }
+//    /* 邮箱验证 -- 结果 */
+//    public function regResult() {
+//        $retInfo = '激活失败，请您检查是否已过激活时间！请重新注册！';
+//        $userModel = new UserModel();
+//        $user = Request::instance()->param('u');
+//        $mail = Request::instance()->param('e');
+//        $pm = Request::instance()->param('p');
+//
+//        $ret = $userModel->registerOK($mail, $user, $pm);
+//        if(UserModel::RET_OK == $ret) {
+//            $retInfo = '激活成功！感谢您的配合！祝您阅读愉快！&nbsp;&nbsp;<a href="' . Util::urlType() . Util::serverIp() . '">开始免费阅读</a>';
+//        }
+//        return $retInfo;
+//    }
 
     /* 检查是否登陆成功 */
     public function canLogin() {
