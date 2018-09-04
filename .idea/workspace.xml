@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1a13b08-d5a7-4b57-8e4f-f65b275107a9" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/application/common/Show.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/application/web/controller/Content.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/application/web/controller/Detail.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/application/web/view/detail/novel.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/application/web/view/public/detailChapter.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/application/web/view/content/novel.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/application/web/view/public/content.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/application/common/Utils.php" afterPath="$PROJECT_DIR$/application/common/Utils.php" />
+      <change beforePath="$PROJECT_DIR$/application/web/controller/Content.php" afterPath="$PROJECT_DIR$/application/web/controller/Content.php" />
       <change beforePath="$PROJECT_DIR$/application/web/model/OnlineInfoModel.php" afterPath="$PROJECT_DIR$/application/web/model/OnlineInfoModel.php" />
-      <change beforePath="$PROJECT_DIR$/router.php" afterPath="$PROJECT_DIR$/router.php" />
+      <change beforePath="$PROJECT_DIR$/application/web/view/public/mainContent.html" afterPath="$PROJECT_DIR$/application/web/view/public/mainContent.html" />
+      <change beforePath="$PROJECT_DIR$/application/web/view/public/mainRank.html" afterPath="$PROJECT_DIR$/application/web/view/public/mainRank.html" />
       <change beforePath="$PROJECT_DIR$/runtime/temp/20a3c8003e96dc3354731a185712145a.php" afterPath="$PROJECT_DIR$/runtime/temp/20a3c8003e96dc3354731a185712145a.php" />
-      <change beforePath="$PROJECT_DIR$/thinkphp/library/think/Request.php" afterPath="$PROJECT_DIR$/thinkphp/library/think/Request.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,74 +23,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Detail.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/web/controller/Detail.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-              <folding>
-                <element signature="e#120#135#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Content.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/web/controller/Content.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Utils.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/common/Utils.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="907">
-              <caret line="85" column="58" lean-forward="false" selection-start-line="85" selection-start-column="49" selection-end-line="85" selection-end-column="58" />
-              <folding>
-                <marker date="1536023852968" expanded="true" signature="1656:1671" ph="..." />
-                <marker date="1536023852968" expanded="true" signature="2962:2976" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="OnlineInfoModel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/web/model/OnlineInfoModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="52" column="27" lean-forward="true" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
+            <state relative-caret-position="114">
+              <caret line="53" column="27" lean-forward="true" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Show.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/common/Show.php">
+      <file leaf-file-name="mainRank.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/web/view/public/mainRank.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="detailChapter.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/web/view/public/detailChapter.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="39" column="49" lean-forward="false" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="49" />
+            <state relative-caret-position="380">
+              <caret line="32" column="130" lean-forward="false" selection-start-line="32" selection-start-column="130" selection-end-line="32" selection-end-column="130" />
               <folding>
-                <element signature="n#src#0;n#img#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#872#878#0" expanded="true" />
-                <element signature="e#878#884#0" expanded="true" />
-                <element signature="e#884#890#0" expanded="true" />
-                <element signature="e#890#896#0" expanded="true" />
-                <element signature="e#896#902#0" expanded="true" />
-                <element signature="e#902#908#0" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#li#0;n#ul#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#src#0;n#img#0;n#a#0;n#div#1;n#li#0;n#ul#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#li#1;n#ul#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#src#0;n#img#0;n#a#0;n#div#1;n#li#1;n#ul#1;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -129,8 +78,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/application/common/MainShow.php" />
-        <option value="$PROJECT_DIR$/thinkphp/convention.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/extend/PHPMailer/PHPMailer.php" />
         <option value="$PROJECT_DIR$/extend/PHPMailer/OAuth.php" />
@@ -169,17 +116,19 @@
         <option value="$PROJECT_DIR$/application/web/view/index/index.html" />
         <option value="$PROJECT_DIR$/application/config.php" />
         <option value="$PROJECT_DIR$/application/web/controller/Index.php" />
-        <option value="$PROJECT_DIR$/application/web/view/public/mainRank.html" />
         <option value="$PROJECT_DIR$/public/js/common.js" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/application/web/view/detail/novel.html" />
-        <option value="$PROJECT_DIR$/application/web/view/public/mainContent.html" />
         <option value="$PROJECT_DIR$/application/common/Utils.php" />
-        <option value="$PROJECT_DIR$/application/web/model/OnlineInfoModel.php" />
         <option value="$PROJECT_DIR$/application/web/view/public/detailChapter.html" />
         <option value="$PROJECT_DIR$/application/common/Show.php" />
         <option value="$PROJECT_DIR$/application/web/controller/Detail.php" />
         <option value="$PROJECT_DIR$/application/web/controller/Content.php" />
+        <option value="$PROJECT_DIR$/application/web/view/content/novel.html" />
+        <option value="$PROJECT_DIR$/application/web/view/public/content.html" />
+        <option value="$PROJECT_DIR$/application/web/view/public/mainContent.html" />
+        <option value="$PROJECT_DIR$/application/web/model/OnlineInfoModel.php" />
+        <option value="$PROJECT_DIR$/application/web/view/public/mainRank.html" />
       </list>
     </option>
   </component>
@@ -205,8 +154,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="436" />
-    <option name="y" value="136" />
+    <option name="x" value="172" />
+    <option name="y" value="85" />
     <option name="width" value="1697" />
     <option name="height" value="860" />
   </component>
@@ -280,7 +229,7 @@
               <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="detail" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="content" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="iyuedu_web" type="b2602c69:ProjectViewProjectNode" />
@@ -288,7 +237,7 @@
               <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="detail" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="iyuedu_web" type="b2602c69:ProjectViewProjectNode" />
@@ -329,11 +278,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\GitHub\iyuedu_web\application\web\controller" />
       <recent name="E:\GitHub\iyuedu_web\application\web\view\public" />
+      <recent name="E:\GitHub\iyuedu_web\application\web\view\content" />
+      <recent name="E:\GitHub\iyuedu_web\application\web\controller" />
       <recent name="E:\GitHub\iyuedu_web\application\web\view\detail" />
       <recent name="E:\GitHub\iyuedu_web\extend" />
-      <recent name="E:\GitHub\iyuedu_web\application\common\PHPMailer" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\GitHub\iyuedu_web\application\web\view\public" />
@@ -390,15 +339,15 @@
       <workItem from="1535942159739" duration="20623000" />
       <workItem from="1535970604235" duration="2025000" />
       <workItem from="1535978421558" duration="6482000" />
-      <workItem from="1536018888771" duration="9511000" />
+      <workItem from="1536018888771" duration="10529000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189157000" />
+    <option name="totallyTimeSpent" value="190175000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="436" y="136" width="1697" height="860" extended-state="0" />
+    <frame x="172" y="85" width="1697" height="860" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20403177" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -434,20 +383,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/mongo/mongo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="38" column="89" lean-forward="true" selection-start-line="38" selection-start-column="89" selection-end-line="38" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/mongodb/mongodb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="627" column="32" lean-forward="true" selection-start-line="627" selection-start-column="32" selection-end-line="627" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/thinkphp/base.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
@@ -605,13 +540,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/web/view/public/mainRank.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -646,17 +574,6 @@
         <state relative-caret-position="38">
           <caret line="2" column="54" lean-forward="false" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="54" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/web/view/public/mainContent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="75" lean-forward="true" selection-start-line="12" selection-start-column="75" selection-end-line="12" selection-end-column="75" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#src#0;n#img#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -697,14 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/web/model/OnlineInfoModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="52" column="27" lean-forward="true" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/common/Show.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
@@ -723,11 +632,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/web/view/content/novel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="53" lean-forward="false" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/web/view/public/content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="9" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+          <folding>
+            <element signature="e#48#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/web/controller/Content.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        <state relative-caret-position="152">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/web/view/public/mainContent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="69" column="10" lean-forward="true" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#src#0;n#img#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/web/model/OnlineInfoModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="53" column="27" lean-forward="true" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/web/view/public/mainRank.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="32" column="130" lean-forward="false" selection-start-line="32" selection-start-column="130" selection-end-line="32" selection-end-column="130" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#li#0;n#ul#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#src#0;n#img#0;n#a#0;n#div#1;n#li#0;n#ul#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#li#1;n#ul#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#src#0;n#img#0;n#a#0;n#div#1;n#li#1;n#ul#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

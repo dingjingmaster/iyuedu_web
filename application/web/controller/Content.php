@@ -14,5 +14,5 @@ use app\common\Utils;
 use app\web\model\OnlineInfoModel;
 
 class Content extends ControllerBase {
-    
+
 }

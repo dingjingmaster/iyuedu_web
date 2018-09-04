@@ -37,6 +37,7 @@ class OnlineInfoModel extends ModelBase {
                 if (count($ret) > 0) {
                     $tmp = array();
                     $tmp['num'] = ++ $num;
+                    $tmp['id'] = $ret['_id'];
                     $tmp['name'] = $ret['name'];
                     $tmp['author'] = $ret['author'];
                     $tmp['imgType'] = $ret['imgType'];
@@ -85,6 +86,7 @@ class OnlineInfoModel extends ModelBase {
                 $ret = $this->queryById($this->cinfo, $iid);
                 if (count($ret) > 0) {
                     $tmp = array();
+                    $tmp['id'] = $ret['_id'];
                     $tmp['name'] = $ret['name'];
                     $tmp['author'] = $ret['author'];
                     $tmp['imgType'] = $ret['imgType'];
