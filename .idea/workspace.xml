@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1a13b08-d5a7-4b57-8e4f-f65b275107a9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/application/web/view/public/header.html" afterPath="$PROJECT_DIR$/application/web/view/public/header.html" />
+      <change beforePath="$PROJECT_DIR$/application/config.php" afterPath="$PROJECT_DIR$/application/config.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,11 +26,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/web/view/public/header.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
               <caret line="17" column="6" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="19" column="37" lean-forward="false" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -101,7 +111,6 @@
         <option value="$PROJECT_DIR$/application/web/view/layout.html" />
         <option value="$PROJECT_DIR$/application/web/view/base.html" />
         <option value="$PROJECT_DIR$/application/web/view/index/main_rank.html" />
-        <option value="$PROJECT_DIR$/application/config.php" />
         <option value="$PROJECT_DIR$/application/web/view/detail/novel.html" />
         <option value="$PROJECT_DIR$/application/web/view/content/novel.html" />
         <option value="$PROJECT_DIR$/application/web/view/public/mainRank.html" />
@@ -129,6 +138,7 @@
         <option value="$PROJECT_DIR$/application/web/view/public/base.html" />
         <option value="$PROJECT_DIR$/application/web/model/ModelBase.php" />
         <option value="$PROJECT_DIR$/application/web/view/public/header.html" />
+        <option value="$PROJECT_DIR$/application/config.php" />
       </list>
     </option>
   </component>
@@ -189,40 +199,6 @@
               <item name="iyuedu_web" type="b2602c69:ProjectViewProjectNode" />
               <item name="iyuedu_web" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="iyuedu_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iyuedu_web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="common" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="iyuedu_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iyuedu_web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="iyuedu_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iyuedu_web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="model" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="iyuedu_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iyuedu_web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="iyuedu_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iyuedu_web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="iyuedu_web" type="b2602c69:ProjectViewProjectNode" />
@@ -305,12 +281,12 @@
       <workItem from="1535942159739" duration="20623000" />
       <workItem from="1535970604235" duration="2025000" />
       <workItem from="1535978421558" duration="6482000" />
-      <workItem from="1536018888771" duration="31489000" />
+      <workItem from="1536018888771" duration="31590000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="211135000" />
+    <option name="totallyTimeSpent" value="211236000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="196" y="166" width="1697" height="860" extended-state="0" />
@@ -472,14 +448,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="205" column="21" lean-forward="true" selection-start-line="205" selection-start-column="21" selection-end-line="205" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -710,6 +678,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="17" column="6" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="19" column="37" lean-forward="false" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
           <folding />
         </state>
       </provider>
