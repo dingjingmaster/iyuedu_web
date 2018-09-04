@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:60:"E:\GitHub\iyuedu_web/application/web\view\index\content.html";i:1536038485;s:58:"E:\GitHub\iyuedu_web\application\web\view\public\base.html";i:1536037921;s:61:"E:\GitHub\iyuedu_web\application\web\view\public\content.html";i:1536038507;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,16 +12,25 @@
     <meta name="updatetime" content="2018-08-09,20:55:32">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <script type="text/javascript" src="http://www.iyd.cn/js/jquery-1.7.2.min.js"></script>
-    <link rel="stylesheet" href="{$host}/public/css/style.css">
-    <script type="text/javascript" src="{$host}/public/js/common.js"></script>
+    <link rel="stylesheet" href="<?php echo $host; ?>/public/css/style.css">
+    <script type="text/javascript" src="<?php echo $host; ?>/public/js/common.js"></script>
 </head>
 <body style="background-color: #ffffff">
-    {block name="header"}{/block}
+    
     <div class="i_contain">
-        {block name="left"}{/block}
-        {block name="right"}{/block}
-        {block name="content"}{/block}
+        
+        
+        <div class="i_read_contain">
+    <h3><?php echo $chapter; ?> &nbsp; 正文</h3><hr/>
+    <?php echo $content; ?>
+    <hr/>
+    <div align="center">
+        <?php echo $pageTurn; ?>
     </div>
-    {block name="footer"}{/block}
+</div>
+<div class="i_clear"></div>
+<div class="i_footer fix_bottom"></div>
+    </div>
+    
 </body>
 </html>

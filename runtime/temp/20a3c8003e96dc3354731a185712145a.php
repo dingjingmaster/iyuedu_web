@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:58:"E:\GitHub\iyuedu_web/application/web\view\index\index.html";i:1535971775;s:58:"E:\GitHub\iyuedu_web\application\web\view\public\base.html";i:1535962942;s:60:"E:\GitHub\iyuedu_web\application\web\view\public\header.html";i:1535954867;s:62:"E:\GitHub\iyuedu_web\application\web\view\public\mainRank.html";i:1536029688;s:65:"E:\GitHub\iyuedu_web\application\web\view\public\mainContent.html";i:1536029428;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:58:"E:\GitHub\iyuedu_web/application/web\view\index\index.html";i:1536037859;s:58:"E:\GitHub\iyuedu_web\application\web\view\public\base.html";i:1536037921;s:60:"E:\GitHub\iyuedu_web\application\web\view\public\header.html";i:1535954867;s:62:"E:\GitHub\iyuedu_web\application\web\view\public\mainRank.html";i:1536029716;s:65:"E:\GitHub\iyuedu_web\application\web\view\public\mainContent.html";i:1536037815;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,7 +35,7 @@
 </div>
 </div>
     <div class="i_contain">
-    <div class="i_contain_left">
+        <div class="i_contain_left">
     <div class="i_contain_rank">
         <ul class="i_rank_chose">
             <li class="i_rank_chose_item cur" onclick="rank_request('rq')">人气榜</li>
@@ -66,7 +66,7 @@
                     <div class="i_detail i_hidden">
                         <span class="i_num"><?php echo $novel['num']; ?></span>
                         <a href="/web/detail/novel/id/<?php echo $novel['id']; ?>/"><img style="width: 100px; height:133px;" src="data:image/<?php echo $novel['imgType']; ?>;base64,<?php echo $novel['imgCotent']; ?>" title="<?php echo $novel['name']; ?>"/></a>
-                        <div class="detail"><p class="i_detail_name"><?php echo $novel['name']; ?></p><p class="i_detail_author"><?php echo $novel['author']; ?></p></div>
+                        <div class="detail"><p class="i_detail_name"><a href="/web/detail/novel/id/<?php echo $novel['id']; ?>/"><?php echo $novel['name']; ?></a></p><p class="i_detail_author"><?php echo $novel['author']; ?></p></div>
                     </div>
                     <div class="i_clear"></div>
                 </li>
@@ -74,7 +74,7 @@
         </ul>
     </div>
 </div>
-    <div class="i_contain_right">
+        <div class="i_contain_right">
     <div class="i_rec_1">
         <h3 class="i_rec1_title">重磅推荐</h3>
         <div class="i_rec1_content">
@@ -144,10 +144,9 @@
             <?php endforeach; endif; else: echo "" ;endif; ?>
         </ul>
     </div>
-
 </div>
+        
     </div>
-    
     
 </body>
 </html>

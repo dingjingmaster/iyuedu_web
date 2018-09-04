@@ -53,14 +53,42 @@ class OnlineInfoModel extends ModelBase {
     public function novelAllInfo($id) {
         $retInfo = array();
         $info = $this->queryById($this->cinfo, $id);
+        $chapter = array();
+        foreach ($info['blockId'] as $bid) {
+            $ret = $this->queryById($this->cdata, $bid);
+            foreach ($ret['chapterContent'] as $ik=>$iv) {
+                $chapter[$ik] = "";
+            }
+        }
+        // 用到的数据
+        $retInfo['id'] = $info['_id'];
+        $retInfo['name'] = $info['name'];
+        $retInfo['author'] = $info['author'];
+        $retInfo['status'] = $info['status'];
+        $retInfo['desc'] = $info['desc'];
+        $retInfo['viewcount'] = $info['viewcount'];
+        $retInfo['updateTime'] = $info['updateTime'];
+        $retInfo['category'] = $info['category'];
+        $retInfo['imgType'] = $info['imgType'];
+        $retInfo['imgCotent'] = $info['imgCotent'];
+        $retInfo['chapter'] = $chapter;
+
+        return $retInfo;
+    }
+
+    /* 小说所有信息请求 */
+    public function novelAllContent($id) {
+        $retInfo = array();
+        $info = $this->queryById($this->cinfo, $id);
         $retInfo = $info;
         $chapter = array();
         foreach ($info['blockId'] as $bid) {
             $ret = $this->queryById($this->cdata, $bid);
             foreach ($ret['chapterContent'] as $ik=>$iv) {
-                array_push($chapter, $ik);
+                $chapter[$ik] = $iv;
             }
         }
+        $retInfo['id'] = $info['_id'];
         $retInfo['chapter'] = $chapter;
 
         return $retInfo;

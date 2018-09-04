@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:59:"E:\GitHub\iyuedu_web/application/web\view\detail\content.html";i:1536022474;s:58:"E:\GitHub\iyuedu_web\application\web\view\public\base.html";i:1535962942;s:60:"E:\GitHub\iyuedu_web\application\web\view\public\header.html";i:1535954867;s:67:"E:\GitHub\iyuedu_web\application\web\view\public\detailChapter.html";i:1536027054;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:59:"E:\GitHub\iyuedu_web/application/web\view\index\detail.html";i:1536037846;s:58:"E:\GitHub\iyuedu_web\application\web\view\public\base.html";i:1536037921;s:60:"E:\GitHub\iyuedu_web\application\web\view\public\header.html";i:1535954867;s:67:"E:\GitHub\iyuedu_web\application\web\view\public\detailChapter.html";i:1536032758;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,7 +35,7 @@
 </div>
 </div>
     <div class="i_contain">
-    <div class="i_contain">
+        <div class="i_contain">
     <div class="d_detail">
         <div>
             <img class="d_detail_img" src="data:image/<?php echo $novelInfo['imgType']; ?>;base64,<?php echo $novelInfo['imgCotent']; ?>" title="<?php echo $novelInfo['name']; ?>"/>
@@ -56,12 +56,12 @@
             <table width="100%">
                 <?php if(is_array($novelInfo['chapter']) || $novelInfo['chapter'] instanceof \think\Collection || $novelInfo['chapter'] instanceof \think\Paginator): if( count($novelInfo['chapter'])==0 ) : echo "" ;else: foreach($novelInfo['chapter'] as $key=>$v): if(count($v) == 2): $n1 = $v[0]; $k1 = array_keys($n1); $n2 = $v[1]; $k2 = array_keys($n2); ?>
                 <tr align="left" class="d_catalog_table">
-                    <th><a href="#"><?php echo reset($n1); ?></a></th>
-                    <th><a href="#"><?php echo reset($n2); ?></a></th>
+                    <th><a href="/web/content/content/id/<?php echo $novelInfo['id']; ?>/num/<?php echo $k1[0]; ?>/name/<?php echo reset($n1); ?>"><?php echo reset($n1); ?></a></th>
+                    <th><a href="/web/content/content/id/<?php echo $novelInfo['id']; ?>/num/<?php echo $k2[0]; ?>/name/<?php echo reset($n2); ?>"><?php echo reset($n2); ?></a></th>
                 </tr>
                 <?php else: $n1 = $v[0]; $k1 = array_keys($n1); ?>
                 <tr align="left" class="d_catalog_table">
-                    <th><a href="#"><?php echo reset($n1); ?></a></th>
+                    <th><a href="/web/content/content/id/<?php echo $novelInfo['id']; ?>/num/<?php echo $k1[0]; ?>/name/$n1[$k1[0]]"><?php echo reset($n1); ?></a></th>
                 </tr>
                 <?php endif; endforeach; endif; else: echo "" ;endif; ?>
             </table>
@@ -73,9 +73,9 @@
 </div>
 <div class="i_clear"></div>
 <div class="i_footer fix_bottom"></div>
-    
+        
+        
     </div>
-    
     
 </body>
 </html>

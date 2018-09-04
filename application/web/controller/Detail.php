@@ -53,7 +53,7 @@ class Detail extends ControllerBase {
         $view->novelInfo = $novelInfo;
         $view->pageSplit = Utils::pageSplit($this->baseUrl, $novelID, $curPage, $totalNum%2==1?$totalNum/2+1:$totalNum/2, $this->showPage, $this->everyPage);
 
-        $ret = $view->fetch('web@detail/novel');
+        $ret = $view->fetch('web@index/detail');
 
         return $ret;
     }

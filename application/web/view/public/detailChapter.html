@@ -24,14 +24,14 @@
                 {assign name="n2" value="$v[1]"/}
                 {assign name="k2" value=":array_keys($n2)"/}
                 <tr align="left" class="d_catalog_table">
-                    <th><a href="#">{:reset($n1)}</a></th>
-                    <th><a href="#">{:reset($n2)}</a></th>
+                    <th><a href="/web/content/content/id/{$novelInfo.id}/num/{$k1[0]}/name/{:reset($n1)}">{:reset($n1)}</a></th>
+                    <th><a href="/web/content/content/id/{$novelInfo.id}/num/{$k2[0]}/name/{:reset($n2)}">{:reset($n2)}</a></th>
                 </tr>
                 {else /}
                 {assign name="n1" value="$v[0]"/}
                 {assign name="k1" value=":array_keys($n1)"/}
                 <tr align="left" class="d_catalog_table">
-                    <th><a href="#">{:reset($n1)}</a></th>
+                    <th><a href="/web/content/content/id/{$novelInfo.id}/num/{$k1[0]}/name/$n1[$k1[0]]">{:reset($n1)}</a></th>
                 </tr>
                 {/if}
                 {/foreach}

@@ -31,8 +31,8 @@ class Utils {
     public static function chapterSort($chapters) {
         $retArr = array();
         $allChapter = array();
-        foreach ($chapters as $c) {
-            $arr = explode('{]', $c);
+        foreach ($chapters as $ik=>$c) {
+            $arr = explode('{]', $ik);
             if(count($arr) != 2) {
                 continue;
             }
