@@ -47,5 +47,25 @@ class Show {
         return $c;
     }
 
+    public static function searchShow($novel) {
+        $html = '<table width="100%">';
+        $html .= '<tr><th align="left">封面</th><th align="left">书名</th><th align="left">作者名</th><th align="left">类别</th><th align="left">状态</th><th align="left">阅读量</th><th align="left">最后更新</th></tr><br/>';
+        foreach ($novel as $n) {
+            $html .= '<tr>';
+            $html .= '<td>' . '<a href="/web/detail/novel/id/' . $n['_id'] . '"><img width="80px" height="96px" src="data:image/' . $n["imgType"] . ';base64,' . $n['imgCotent'] . '"/></a></td>';
+            $html .= '<td>' . '<a href="/web/detail/novel/id/' . $n['_id'] . '"><p>' . $n['name'] . '</p></a></td>';
+            $html .= '<td>' . '<p>' . $n['author'] . '</p></td>';
+            $html .= '<td>' . '<p>' . $n['category'] . '</p></td>';
+            $html .= '<td>' . '<p>' . $n['status'] . '</p></td>';
+            $html .= '<td>' . '<p>' . $n['viewcount'] . '</p></td>';
+            $html .= '<td>' . '<p>' . Utils::timeStr($n['updateTime']) . '</p></td>';
+            $html .= '</tr>';
+        }
+        $html .= '</table>';
+        return $html;
+    }
+
+
+
 
 }

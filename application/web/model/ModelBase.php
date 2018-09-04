@@ -39,6 +39,26 @@ class ModelBase extends Model {
         return $ret;
     }
 
+    public function queryByField($collection, $field, $value) {
+        $novels = array();
+        $options = array();
+        $filter = Array($field => new Regex($value));
+        $mongo = new Manager('mongodb://' . $this->mongoIP . ':' . $this->mongoPort);
+        $query = new Query($filter, $options);
+        $readPreference = new ReadPreference(ReadPreference::RP_PRIMARY);
+        $res = $mongo->executeQuery($this->dbname . '.' . $collection, $query, $readPreference);
+        foreach ($res as $i) {
+            $novelInfo = array();
+            foreach ($i as $ik=>$iv) {
+                $novelInfo[$ik] = $iv;
+            }
+            if(count($novelInfo) > 0) {
+                array_push($novels, $novelInfo);
+            }
+        }
+        return $novels;
+    }
+
 
 
 

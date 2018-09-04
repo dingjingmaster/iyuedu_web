@@ -10,9 +10,6 @@ namespace app\web\model;
 
 
 class OnlineInfoModel extends ModelBase {
-    private $csummary = "online_info";
-    private $cinfo = 'online_index';
-    private $cdata = 'online_data';
 
     /* 首页排行榜 默认最多20条 */
     public function mainRank($moduleName) {
@@ -127,4 +124,14 @@ class OnlineInfoModel extends ModelBase {
         }
         return $mainInfo;
     }
+
+    /* 根据关键词查找小说 */
+    public function novelQuery($queryName){
+        $novels = $this->queryByField($this->cinfo, 'name', $queryName);
+        return $novels;
+    }
+
+    private $csummary = "online_info";
+    private $cinfo = 'online_index';
+    private $cdata = 'online_data';
 }

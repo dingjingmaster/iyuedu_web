@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:58:"E:\GitHub\iyuedu_web/application/web\view\index\index.html";i:1536037859;s:58:"E:\GitHub\iyuedu_web\application\web\view\public\base.html";i:1536037921;s:60:"E:\GitHub\iyuedu_web\application\web\view\public\header.html";i:1535954867;s:62:"E:\GitHub\iyuedu_web\application\web\view\public\mainRank.html";i:1536029716;s:65:"E:\GitHub\iyuedu_web\application\web\view\public\mainContent.html";i:1536037815;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:58:"E:\GitHub\iyuedu_web/application/web\view\index\index.html";i:1536039823;s:58:"E:\GitHub\iyuedu_web\application\web\view\public\base.html";i:1536037921;s:60:"E:\GitHub\iyuedu_web\application\web\view\public\header.html";i:1535954867;s:62:"E:\GitHub\iyuedu_web\application\web\view\public\mainRank.html";i:1536029716;s:65:"E:\GitHub\iyuedu_web\application\web\view\public\mainContent.html";i:1536037815;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>

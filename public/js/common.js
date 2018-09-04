@@ -10,6 +10,16 @@ $(document).ready(function(){
         $(this).siblings().find('.i_sample').show();
         $(this).siblings().find('.i_detail').hide();
     });
+    $(".i_search_btn").click(function () {
+        var qn = $(".i_search_name").val();
+        if("" != qn && null != qn && undefined != qn ) {
+            if('.' != qn && '*' != qn) {
+                location.href = '/web/search/book/query/' + qn + "/";
+            } else {
+               alert('请不要输入特殊字符!!!');
+            }
+        }
+    });
 });
 
 /* 首页排行榜 */
