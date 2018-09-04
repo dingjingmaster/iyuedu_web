@@ -48,6 +48,24 @@ class OnlineInfoModel extends ModelBase {
         return $rankInfo;
     }
 
+    /* 小说所有信息请求 */
+    public function novelAllInfo($id) {
+        $retInfo = array();
+        $info = $this->queryById($this->cinfo, $id);
+        $retInfo = $info;
+        $chapter = array();
+        foreach ($info['blockId'] as $bid) {
+            $ret = $this->queryById($this->cdata, $bid);
+            foreach ($ret['chapterContent'] as $ik=>$iv) {
+                array_push($chapter, $ik);
+            }
+        }
+        $retInfo['chapter'] = $chapter;
+
+        return $retInfo;
+    }
+
+    /* 首页右侧推荐 */
     public function mainRecommend(){
         $mainID = array();
         $mainInfo = array();

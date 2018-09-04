@@ -26,6 +26,21 @@ class Utils {
         $day = substr($time, 6, 2);
         return $year . '-' . $month . '-' .$day;
     }
+
+    /* 章节排序 */
+    public static function chapterSort($chapters) {
+        $retArr = array();
+        $allChapter = array();
+        foreach ($chapters as $c) {
+            $arr = explode('{]', $c);
+            if(count($arr) != 2) {
+                continue;
+            }
+            $allChapter[$arr[0]] = $arr[1];
+        }
+        ksort($allChapter);
+        return $allChapter;
+    }
     /* 0与正整数下限 */
     public static function integerFloor($int) {
         return $int < 0 ? 0 : $int;

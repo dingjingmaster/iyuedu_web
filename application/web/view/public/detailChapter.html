@@ -1,0 +1,46 @@
+<div class="i_contain">
+    <div class="d_detail">
+        <div>
+            <img class="d_detail_img" src="data:image/{$novelInfo.imgType};base64,{$novelInfo.imgCotent}" title="{$novelInfo.name}"/>
+            <div class="d_detail_info">
+                <h1>{$novelInfo.name}</h1>
+                <span><strong>作者</strong>：{$novelInfo.author}</span><br/>
+                <span><strong>类型</strong>：{$novelInfo.category}</span><br/>
+                <span><strong>状态</strong>：{$novelInfo.status}</span><br/>
+                <span><strong>阅读量</strong>：{$novelInfo.viewcount}</span><br/>
+                <span><strong>更新时间</strong>：{$novelInfo.updateTime}</span><br/>
+                <span><strong>简介</strong>：</span><br/>
+                <small class="d_detail_desc">{$novelInfo.desc}</small>
+            </div>
+        </div>
+        <div class="i_clear"></div>
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;目录</h3><hr/>
+        <div class="d_detail_catalog">
+            <table width="100%">
+                {foreach name="novelInfo['chapter']" item="v"}
+                {if condition="count($v) eq 2"}
+                {assign name="n1" value="$v[0]"/}
+                {assign name="k1" value=":array_keys($n1)"/}
+                {assign name="n2" value="$v[1]"/}
+                {assign name="k2" value=":array_keys($n2)"/}
+                <tr align="left" class="d_catalog_table">
+                    <th><a href="#">{:reset($n1)}</a></th>
+                    <th><a href="#">{:reset($n2)}</a></th>
+                </tr>
+                {else /}
+                {assign name="n1" value="$v[0]"/}
+                {assign name="k1" value=":array_keys($n1)"/}
+                <tr align="left" class="d_catalog_table">
+                    <th><a href="#">{:reset($n1)}</a></th>
+                </tr>
+                {/if}
+                {/foreach}
+            </table>
+        </div>
+        <div class="i_category_split">{$pageSplit}</div>
+    </div>
+    <div class="d_category_rec"></div>
+
+</div>
+<div class="i_clear"></div>
+<div class="i_footer fix_bottom"></div>
