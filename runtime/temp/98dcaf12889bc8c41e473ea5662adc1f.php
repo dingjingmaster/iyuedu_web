@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:60:"E:\GitHub\iyuedu_web/application/web\view\index\content.html";i:1536038485;s:58:"E:\GitHub\iyuedu_web\application\web\view\public\base.html";i:1536037921;s:61:"E:\GitHub\iyuedu_web\application\web\view\public\content.html";i:1536038507;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:60:"E:\GitHub\iyuedu_web/application/web\view\index\content.html";i:1536038485;s:58:"E:\GitHub\iyuedu_web\application\web\view\public\base.html";i:1536037921;s:61:"E:\GitHub\iyuedu_web\application\web\view\public\content.html";i:1536053021;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,7 +29,6 @@
     </div>
 </div>
 <div class="i_clear"></div>
-<div class="i_footer fix_bottom"></div>
     </div>
     
 </body>

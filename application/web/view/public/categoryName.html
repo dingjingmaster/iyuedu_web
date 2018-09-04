@@ -1,0 +1,24 @@
+<div class="i_contain_left">
+    <div class="i_category_list">
+        <table width="100%">
+            {assign name="count" value=":count($categoryList) - 1"/}
+            {assign name="flag" value="$count % 2"/}
+            {if condition="($flag == 0)"}
+                {for start="0" end="$count" step="2"}
+                <tr>
+                    <th><a href="/web/category/category/c/{$categoryList[$i]}">{$categoryList[$i]}</a></th>
+                    <th><a href="/web/category/category/c/{$categoryList[$i+1]}">{$categoryList[$i+1]}</a></th>
+                </tr>
+                {/for}
+            {else/}
+                {for start="0" end="$count" step="2"}
+                <tr>
+                    <th><a href="/web/category/category/c/{$categoryList[$i]}">{$categoryList[$i]}</a></th>
+                    <th><a href="/web/category/category/c/{$categoryList[$i+1]}">{$categoryList[$i+1]}</a></th>
+                </tr>
+                {/for}
+                <tr><th><a href="/web/category/category/c/{$categoryList[$count-1]}">{$categoryList[$count-1]}</a></th></tr>
+            {/if}
+        </table>
+    </div>
+</div>

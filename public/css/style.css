@@ -5,8 +5,8 @@ small{font-size:18px;}
 .reg_input{width:240px;height:26px;padding:0 6px 0 6px;border:1px solid #9932CC;border-radius:3px;}
 h1,h3,p{color:#333333;line-height:36px;align-items:left;}
 h4,h5,h6,span {color:dimgrey;align-items:left;}
-th{color:#9932CC;font-family:楷体,"Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;}
-tr{margin:10px 0 10px 0;}
+th{width:98px;color:#9932CC;font-family:楷体,"Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;}
+tr{margin:28px 0 28px 0;padding:6px;}
 .c_write{color:aliceblue;}
 .i_clear {clear:both;display:block;}
 .i_hidden{display:none;}

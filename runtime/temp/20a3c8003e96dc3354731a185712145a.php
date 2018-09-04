@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:58:"E:\GitHub\iyuedu_web/application/web\view\index\index.html";i:1536039823;s:58:"E:\GitHub\iyuedu_web\application\web\view\public\base.html";i:1536037921;s:60:"E:\GitHub\iyuedu_web\application\web\view\public\header.html";i:1535954867;s:62:"E:\GitHub\iyuedu_web\application\web\view\public\mainRank.html";i:1536029716;s:65:"E:\GitHub\iyuedu_web\application\web\view\public\mainContent.html";i:1536037815;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:58:"E:\GitHub\iyuedu_web/application/web\view\index\index.html";i:1536039823;s:58:"E:\GitHub\iyuedu_web\application\web\view\public\base.html";i:1536037921;s:60:"E:\GitHub\iyuedu_web\application\web\view\public\header.html";i:1536047154;s:62:"E:\GitHub\iyuedu_web\application\web\view\public\mainRank.html";i:1536029716;s:65:"E:\GitHub\iyuedu_web\application\web\view\public\mainContent.html";i:1536037815;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,7 +27,7 @@
 <div class="i_head_nav">
 <ul class="i_menu">
 <li class="i_menu_item"><a href="<?php echo $host; ?>" class="c_write">首页</a></li>
-<li class="i_menu_item"><a href="/novel/category/init/" class="c_write">分类</a></li>
+<li class="i_menu_item"><a href="/web/category/category/" class="c_write">分类</a></li>
 <li class="i_menu_item"><a href="#" class="c_write">书架</a></li>
 <li class="i_login_status <?php echo $showLog; ?>"><nobr><a href="/novel/login/loginHTML/" class="c_write">登录</a>|<a href="/novel/login/registerHTML/" class="c_write">注册</a></nobr></li>
 <li class="i_login_status <?php echo $showLogged; ?>"><nobr><a href="#" class="c_write"><?php echo $userName; ?>&nbsp;已登录</a></nobr></li>

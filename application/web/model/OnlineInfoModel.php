@@ -125,9 +125,29 @@ class OnlineInfoModel extends ModelBase {
         return $mainInfo;
     }
 
+    /* 获取类别 */
+    public function novelCategory() {
+        $categorys = array();
+        $ret = $this->queryByField($this->csummary, '_id', 'detail');
+        if(count($ret) > 0) {
+            foreach ($ret[0]['category'] as $ik=>$iv) {
+                array_push($categorys, $iv);
+            }
+        }
+        $categorys = array_unique($categorys);
+        sort($categorys);
+        return $categorys;
+    }
+
     /* 根据关键词查找小说 */
     public function novelQuery($queryName){
         $novels = $this->queryByField($this->cinfo, 'name', $queryName);
+        return $novels;
+    }
+
+    /* 获取某类别的小说 */
+    public function getCategoryNovel($category) {
+        $novels = $this->queryByField($this->cinfo, 'category', $category);
         return $novels;
     }
 

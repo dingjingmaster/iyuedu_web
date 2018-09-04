@@ -46,7 +46,7 @@ class ModelBase extends Model {
         $mongo = new Manager('mongodb://' . $this->mongoIP . ':' . $this->mongoPort);
         $query = new Query($filter, $options);
         $readPreference = new ReadPreference(ReadPreference::RP_PRIMARY);
-        $res = $mongo->executeQuery($this->dbname . '.' . $collection, $query, $readPreference);
+        $res = $mongo->executeQuery($this->dbname . '.' . $collection, $query, $readPreference)->toArray();
         foreach ($res as $i) {
             $novelInfo = array();
             foreach ($i as $ik=>$iv) {

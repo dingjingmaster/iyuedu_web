@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:59:"E:\GitHub\iyuedu_web/application/web\view\index\search.html";i:1536039860;s:58:"E:\GitHub\iyuedu_web\application\web\view\public\base.html";i:1536037921;s:60:"E:\GitHub\iyuedu_web\application\web\view\public\header.html";i:1536047154;s:60:"E:\GitHub\iyuedu_web\application\web\view\public\search.html";i:1536053021;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:61:"E:\GitHub\iyuedu_web/application/web\view\index\category.html";i:1536043929;s:58:"E:\GitHub\iyuedu_web\application\web\view\public\base.html";i:1536037921;s:60:"E:\GitHub\iyuedu_web\application\web\view\public\header.html";i:1536047154;s:66:"E:\GitHub\iyuedu_web\application\web\view\public\categoryName.html";i:1536052395;s:69:"E:\GitHub\iyuedu_web\application\web\view\public\categoryContent.html";i:1536053234;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,13 +35,31 @@
 </div>
 </div>
     <div class="i_contain">
-        
-        
-        <div class="i_contain">
-    <div class="i_search_result"><?php echo $searchResult; ?></div>
+        <div class="i_contain_left">
+    <div class="i_category_list">
+        <table width="100%">
+            <?php $count = count($categoryList) - 1; $flag = $count % 2; if(($flag == 0)): $__FOR_START_860968858__=0;$__FOR_END_860968858__=$count;for($i=$__FOR_START_860968858__;$i < $__FOR_END_860968858__;$i+=2){ ?>
+                <tr>
+                    <th><a href="/web/category/category/c/<?php echo $categoryList[$i]; ?>"><?php echo $categoryList[$i]; ?></a></th>
+                    <th><a href="/web/category/category/c/<?php echo $categoryList[$i+1]; ?>"><?php echo $categoryList[$i+1]; ?></a></th>
+                </tr>
+                <?php } else: $__FOR_START_715641919__=0;$__FOR_END_715641919__=$count;for($i=$__FOR_START_715641919__;$i < $__FOR_END_715641919__;$i+=2){ ?>
+                <tr>
+                    <th><a href="/web/category/category/c/<?php echo $categoryList[$i]; ?>"><?php echo $categoryList[$i]; ?></a></th>
+                    <th><a href="/web/category/category/c/<?php echo $categoryList[$i+1]; ?>"><?php echo $categoryList[$i+1]; ?></a></th>
+                </tr>
+                <?php } ?>
+                <tr><th><a href="/web/category/category/c/<?php echo $categoryList[$count-1]; ?>"><?php echo $categoryList[$count-1]; ?></a></th></tr>
+            <?php endif; ?>
+        </table>
+    </div>
+</div>
+        <div class="i_contain_right">
+    <div class="i_category_books"><?php echo $books; ?></div>
     <div class="i_category_split"><?php echo $pageSplit; ?></div>
 </div>
 <div class="i_clear"></div>
+        
     </div>
     
 </body>

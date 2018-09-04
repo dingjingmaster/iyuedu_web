@@ -51,7 +51,7 @@ class Detail extends ControllerBase {
         $view->showLogged = Session::has('user')?'i_show':'i_hidden';                       /* 登陆展示 */
         $view->userName = Session::has('user')?Session::get('user.name'):'';        /*  用户名展示 */
         $view->novelInfo = $novelInfo;
-        $view->pageSplit = Utils::pageSplit($this->baseUrl, $novelID, $curPage, $totalNum%2==1?$totalNum/2+1:$totalNum/2, $this->showPage, $this->everyPage);
+        $view->pageSplit = Utils::pageSplit($this->baseUrl, $novelID, $curPage, $totalNum%2==1?$totalNum/2?(int)($totalNum/2+1):$totalNum/2:$totalNum/2, $this->showPage, $this->everyPage);
 
         $ret = $view->fetch('web@index/detail');
 
