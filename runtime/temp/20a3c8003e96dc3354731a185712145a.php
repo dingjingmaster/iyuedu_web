@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:58:"E:\GitHub\iyuedu_web/application/web\view\index\index.html";i:1536039823;s:58:"E:\GitHub\iyuedu_web\application\web\view\public\base.html";i:1536037921;s:60:"E:\GitHub\iyuedu_web\application\web\view\public\header.html";i:1536047154;s:62:"E:\GitHub\iyuedu_web\application\web\view\public\mainRank.html";i:1536029716;s:65:"E:\GitHub\iyuedu_web\application\web\view\public\mainContent.html";i:1536037815;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:58:"E:\GitHub\iyuedu_web/application/web\view\index\index.html";i:1536039823;s:58:"E:\GitHub\iyuedu_web\application\web\view\public\base.html";i:1536055540;s:60:"E:\GitHub\iyuedu_web\application\web\view\public\header.html";i:1536055662;s:62:"E:\GitHub\iyuedu_web\application\web\view\public\mainRank.html";i:1536029716;s:65:"E:\GitHub\iyuedu_web\application\web\view\public\mainContent.html";i:1536037815;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,6 +14,11 @@
     <script type="text/javascript" src="http://www.iyd.cn/js/jquery-1.7.2.min.js"></script>
     <link rel="stylesheet" href="<?php echo $host; ?>/public/css/style.css">
     <script type="text/javascript" src="<?php echo $host; ?>/public/js/common.js"></script>
+    <!-- 谷歌分析 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124579177-1"></script>
+    <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-124579177-1');</script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({google_ad_client: "ca-pub-8080155533523922", enable_page_level_ads: true});</script>
 </head>
 <body style="background-color: #ffffff">
     <div class="i_head">
@@ -29,7 +34,7 @@
 <li class="i_menu_item"><a href="<?php echo $host; ?>" class="c_write">首页</a></li>
 <li class="i_menu_item"><a href="/web/category/category/" class="c_write">分类</a></li>
 <li class="i_menu_item"><a href="#" class="c_write">书架</a></li>
-<li class="i_login_status <?php echo $showLog; ?>"><nobr><a href="/novel/login/loginHTML/" class="c_write">登录</a>|<a href="/novel/login/registerHTML/" class="c_write">注册</a></nobr></li>
+<li class="i_login_status <?php echo $showLog; ?>"><nobr><a href="#" class="c_write">登录</a>|<a href="#" class="c_write">注册</a></nobr></li>
 <li class="i_login_status <?php echo $showLogged; ?>"><nobr><a href="#" class="c_write"><?php echo $userName; ?>&nbsp;已登录</a></nobr></li>
 </ul>
 </div>
