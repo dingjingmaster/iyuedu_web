@@ -16,7 +16,7 @@ use MongoDB\Driver\ReadPreference;
 
 class ModelBase extends Model {
     private $mongoIP = '127.0.0.1';
-    private $mongoPort = 1888; //27017;
+    private $mongoPort = 27017;
     private $dbname = 'novel_online';
 
     public function __construct($data = []) {

@@ -17,6 +17,9 @@ class ControllerBase extends Controller {
         parent::__construct($request);
     }
 
+    public  function _empty() {
+        abort();
+    }
 
 
     public function __destruct()

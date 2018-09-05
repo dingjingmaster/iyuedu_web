@@ -109,7 +109,7 @@ return [
     // 表单pjax伪装变量
     'var_pjax'               => '_pjax',
     // 是否开启请求缓存 true自动缓存 支持设置请求缓存规则
-    'request_cache'          => false,
+    'request_cache'          => true,
     // 请求缓存有效期
     'request_cache_expire'   => null,
     // 全局请求缓存排除规则
@@ -149,7 +149,7 @@ return [
     // +----------------------------------------------------------------------
 
     // 异常页面的模板文件
-    //'exception_tmpl'         => APP_PATH . 'web/view' . DS . '404.html',
+    'exception_tmpl'         => APP_PATH . 'web/view' . DS . 'index/404.html',
 
     // 错误显示信息,非调试模式有效
     'error_message'          => '页面错误！请稍后再试～',
