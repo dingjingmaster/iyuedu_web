@@ -21,7 +21,7 @@ if __name__ == '__main__':
 
     # geckodriver
     gbrower = webdriver.Chrome('../lib/chromedriver.exe')
-    #gbrower = webdriver.Chrome('../lib/geckodriver')
+    #gbrower = webdriver.Firefox('../lib/geckodriver')
     gbrower.get('http://www.enjoyread.top')                                         # 打开首页
     time.sleep(6)
     gbrower.get('http://www.enjoyread.top/web/category/category/')
