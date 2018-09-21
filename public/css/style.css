@@ -19,7 +19,7 @@ li.page_turn {text-align:center;float:left;margin:6px;}
 .i_head_img {width:165px;margin:16px 0 0 0;float:left;}
 .i_search {height:43px;margin:28px 16px 0 0;float:right;display:block;position:relative;}
 .i_search_name {width:300px;height:34px;margin:0;padding:0 0 2px 6px;border-radius:5px;display:inline-block;vertical-align:top;border:2px solid #9400D3;position:relative;}
-.i_search_btn {width:46px;height:40px;margin-left:-15px;border-radius:4px;background:#9400D3 url("http://enjoyread.top/public/img/search_btn.png") no-repeat center;display:inline-block;cursor:pointer;}
+.i_search_btn {width:46px;height:40px;margin-left:-15px;border-radius:4px;background:#9400D3 url("/public/img/search_btn.png") no-repeat center;display:inline-block;cursor:pointer;}
 .i_head_nav {height:50px;line-height:50px;font-size:20px;background-color:#9932CC;clear:both;overflow:hidden;}
 .i_menu {width:1180px;float:left;font-size:18px;}
 .i_menu_item {height:60px;margin:0 30px 0 40px;float:left;cursor:pointer;}
