@@ -14,7 +14,7 @@ def online_data(onlineIP, onlinePort,\
                 localIP, localPort, localDB, info, data):
     # 线上数据库
     onlineMongo = MongoDB()
-    onlineMongo.connect(onlineIP, onlinePort)
+    onlineMongo.connect(onlineIP, onlinePort, user, pwd)
 
     # 本地数据库
     localMongo = MongoDB()
@@ -33,7 +33,7 @@ def online_data(onlineIP, onlinePort,\
         if None == i:
             print '遍历数据错误'
             break
-        if(MongoDB.novelOnline(onlineIP, onlinePort, i)):
+        if(MongoDB.novelOnline(onlineIP, onlinePort, i, user, pwd)):
             localMongo.setCollection(localDB, info)
             localMongo.updateDocumentById(i.getId(), 'online', i.getOnline())
 
@@ -47,7 +47,10 @@ def online_data(onlineIP, onlinePort,\
 if __name__ == '__main__':
 
     onlineIP = '127.0.0.1'
-    onlinePort = 27017
+    onlineIP = '45.76.64.223'
+    user = 'dingjing'
+    pwd = 'root'
+    onlinePort = 1888
     categoryMap = {}
     categoryMapPath = './data/category_info.txt'
     ''' 同步的数据库 '''

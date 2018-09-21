@@ -27,13 +27,17 @@ class MongoDB:
         sh.setFormatter(fm)
         self.log.addHandler(sh)
     
-    def connect(self, ip, port=27017):
+    def connect(self, ip, port=27017, user = None, pwd = None):
         try:
-            self.__conn = MongoClient(ip, port)
+            auth = ''
+            if ((None != user) and (None != pwd)):
+                auth = str(user) + ':' + str(pwd) + '@'
+            self.__conn = MongoClient("mongodb://%s%s:%d" % (auth, ip, port))
         except BaseException as e:
             self.log.error('MongoDB 连接失败!' + e.message)
         self.__collection = None
         return MongoDB
+    
     
     def setCollection(self, dbName, collectionName):
         if None == self.__conn:
@@ -182,10 +186,10 @@ class MongoDB:
             yield novel
 
     @staticmethod
-    def novelOnline(onlineIP, onlinePort, novel):
+    def novelOnline(onlineIP, onlinePort, novel, user, pwd):
         # 线上
         onlineMongo = MongoDB()
-        onlineMongo.connect(onlineIP, onlinePort)
+        onlineMongo.connect(onlineIP, onlinePort, user, pwd)
         onlineMongo.setCollection('novel_online', 'online_info')
         # 保存
         size = None
