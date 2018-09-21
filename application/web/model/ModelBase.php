@@ -17,6 +17,8 @@ use MongoDB\Driver\ReadPreference;
 class ModelBase extends Model {
     private $mongoIP = '127.0.0.1';
     private $mongoPort = 27017;
+    private $user = '';
+    private $pwd = '';
     private $dbname = 'novel_online';
 
     public function __construct($data = []) {
@@ -27,7 +29,7 @@ class ModelBase extends Model {
         $ret = array();
         $options = array();
         $filter = Array('_id' => $id);
-        $mongo = new Manager('mongodb://' . $this->mongoIP . ':' . $this->mongoPort);
+        $mongo = new Manager('mongodb://' . $this->user . ':' . $this->pwd . '@' . $this->mongoIP . ':' . $this->mongoPort);
         $query = new Query($filter, $options);
         $readPreference = new ReadPreference(ReadPreference::RP_PRIMARY);
         $res = $mongo->executeQuery($this->dbname . '.' . $collection, $query, $readPreference)->toArray();
@@ -43,7 +45,7 @@ class ModelBase extends Model {
         $novels = array();
         $options = array();
         $filter = Array($field => new Regex($value));
-        $mongo = new Manager('mongodb://' . $this->mongoIP . ':' . $this->mongoPort);
+        $mongo = new Manager('mongodb://' . $this->user . ':' . $this->pwd . '@' . $this->mongoIP . ':' . $this->mongoPort);
         $query = new Query($filter, $options);
         $readPreference = new ReadPreference(ReadPreference::RP_PRIMARY);
         $res = $mongo->executeQuery($this->dbname . '.' . $collection, $query, $readPreference)->toArray();
