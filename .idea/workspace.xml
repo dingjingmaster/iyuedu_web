@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1a13b08-d5a7-4b57-8e4f-f65b275107a9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/jquery-1.7.2.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/web/view/public/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/web/view/public/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/lib/NovelBean.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/lib/NovelBean.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/tool/seo1.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/tool/seo1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thinkphp/library/think/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/thinkphp/library/think/Request.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thinkphp/library/think/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/thinkphp/library/think/View.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thinkphp/library/think/template/taglib/Cx.php" beforeDir="false" afterPath="$PROJECT_DIR$/thinkphp/library/think/template/taglib/Cx.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thinkphp/tpl/default_index.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/thinkphp/tpl/default_index.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thinkphp/tpl/think_exception.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/thinkphp/tpl/think_exception.tpl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,8 +54,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/web/view/public/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+            <state relative-caret-position="405">
+              <caret line="15" column="65" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -345,12 +334,12 @@
       <workItem from="1537147917237" duration="668000" />
       <workItem from="1537150987452" duration="606000" />
       <workItem from="1537538459935" duration="1289000" />
-      <workItem from="1539581534420" duration="864000" />
+      <workItem from="1539581534420" duration="1052000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="221434000" />
+    <option name="totallyTimeSpent" value="221622000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="301" y="57" width="1697" height="789" extended-state="0" />
@@ -693,8 +682,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/web/view/public/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+        <state relative-caret-position="405">
+          <caret line="15" column="65" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
         </state>
       </provider>
     </entry>
