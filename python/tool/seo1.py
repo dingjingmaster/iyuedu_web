@@ -36,9 +36,9 @@ if __name__ == '__main__':
             break
         ''' 开始滚动阅读 '''
         for i in range(0, 10000, 500):
-            js = 'window.scrollTo(0,' + str(i) + ')'
+            jquery-1.7.2.min.js = 'window.scrollTo(0,' + str(i) + ')'
             try:
-                gbrower.execute_script(js)
+                gbrower.execute_script(jquery-1.7.2.min.js)
             except:
                 pass
             time.sleep(1)

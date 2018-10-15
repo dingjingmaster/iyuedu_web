@@ -43,7 +43,7 @@ class Cx extends Taglib
         'notpresent' => ['attr' => 'name'],
         'defined'    => ['attr' => 'name'],
         'notdefined' => ['attr' => 'name'],
-        'load'       => ['attr' => 'file,href,type,value,basepath', 'close' => 0, 'alias' => ['import,css,js', 'type']],
+        'load'       => ['attr' => 'file,href,type,value,basepath', 'close' => 0, 'alias' => ['import,css,jquery-1.7.2.min.js', 'type']],
         'assign'     => ['attr' => 'name,value', 'close' => 0],
         'define'     => ['attr' => 'name,value', 'close' => 0],
         'for'        => ['attr' => 'start,end,name,comparison,step'],
@@ -481,7 +481,7 @@ class Cx extends Taglib
     }
 
     /**
-     * load 标签解析 {load file="/static/js/public.js" /}
+     * load 标签解析 {load file="/static/jquery-1.7.2.min.js/public.jquery-1.7.2.min.js" /}
      * 格式：{load file="/static/css/public.css" /}
      * @access public
      * @param array $tag 标签属性
@@ -508,7 +508,7 @@ class Cx extends Taglib
         foreach ($array as $val) {
             $type = strtolower(substr(strrchr($val, '.'), 1));
             switch ($type) {
-                case 'js':
+                case 'jquery-1.7.2.min.js':
                     $parseStr .= '<script type="text/javascript" src="' . $val . '"></script>';
                     break;
                 case 'css':

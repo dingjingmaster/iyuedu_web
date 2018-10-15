@@ -29,13 +29,14 @@ class NovelBean:
         self.__author = ''                                  # 作者名
         self.__normName = ''                                # 归一书名
         self.__normAuthor = ''                              # 归一作者名
+        self.__novelUrl = ''                                # 小说 url
+        
         self.__imgUrl = ''                                  # 封面图片 url
         self.__imgContent = ''                              # 封面图片
         self.__imgType = ''                                 # 图片格式
         self.__category = ''                                # 分类
         self.__status = ''                                  # 连载/完结/精修完结 状态
         self.__desc = ''                                    # 书籍简介
-        self.__novelUrl = ''                                # 小说 url
         self.__chapterContent = {}                          # 章节内容
         self.__chapterUrl = {}                              # 书籍所有章节链接
         self.__errorChapter = {}                            # 错误的章节链接

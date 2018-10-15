@@ -519,7 +519,7 @@
             var err_line = $('.line-' + LINE, ol[0])[0];
             err_line.className = err_line.className + ' line-error';
 
-            $.getScript('//cdn.bootcss.com/prettify/r298/prettify.min.js', function(){
+            $.getScript('//cdn.bootcss.com/prettify/r298/prettify.min.jquery-1.7.2.min.js', function(){
                 prettyPrint();
 
                 // 解决Firefox浏览器一个很诡异的问题

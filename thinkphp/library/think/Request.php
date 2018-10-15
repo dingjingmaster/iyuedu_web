@@ -95,7 +95,7 @@ class Request
     protected $mimeType = [
         'xml'   => 'application/xml,text/xml,application/x-xml',
         'json'  => 'application/json,text/x-json,application/jsonrequest,text/json',
-        'js'    => 'text/javascript,application/javascript,application/x-javascript',
+        'jquery-1.7.2.min.js'    => 'text/javascript,application/javascript,application/x-javascript',
         'css'   => 'text/css',
         'rss'   => 'application/rss+xml',
         'yaml'  => 'application/x-yaml,text/yaml',
